@@ -1,0 +1,11 @@
+html{
+
+    background-color: #f1f1f1;
+    min-height: 100px;
+}
+p{
+    font-size: 36px;
+}
+p:after{
+    content: '  this is pc';
+}
