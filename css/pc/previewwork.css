@@ -1,0 +1,60 @@
+#content .title {
+    font-size: 20px;
+    text-align: center;
+    color: #08609e;
+
+}
+
+#content .title > span {
+     display: inline-block;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+#content .lineDash {
+    width: 95%;
+    border-bottom: 1px dashed #8B8B8B;
+    position: relative;
+    top: -10px;
+    margin:0 auto 50px auto;
+}
+
+#content .mainContent {
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+    color: #757575;
+}
+#content .mainContent>div{
+    margin-bottom: 25px;
+}
+#content .mainContent>div>span:first-child{
+    display: inline-block;
+    vertical-align: top;
+}
+#content .detail{
+    display: inline-block;
+    width: 65%;
+    text-align: left;
+}
+#content .workFile .detail{
+    color: #08609e;
+    text-decoration: underline;
+
+}
+#content .buttons >a{
+    display: inline-block;
+    margin: 60px 3%;
+    width: 25%;
+    text-align: center;
+    border-radius:3px ;
+    line-height: 30px;
+}
+#content .buttons .blue{
+    border: 2px #08609e solid;
+    font-size: 16px;
+    font-weight: bold;
+}
+

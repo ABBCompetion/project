@@ -1,0 +1,54 @@
+#content .title {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #08609e;
+
+}
+
+#content .title > span {
+     display: inline-block;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    margin:0 auto 50px auto;
+
+}
+
+#content .lineDash {
+    display: none;
+}
+
+#content .mainContent {
+    width: 90%;
+    text-align: left;
+    margin: auto;
+    font-size: 1rem;
+    color: #757575;
+}
+#content .mainContent>div{
+    margin-bottom: 1rem;
+}
+#content .mainContent>div>span:first-child{
+    color: black;
+}
+#content .workFile .detail{
+    color: #08609e;
+    text-decoration: underline;
+
+}
+#content .mainContent .buttons{
+    width: 95%;
+    margin:4rem auto;
+    text-align: center;
+}
+#content .buttons >*{
+    display:  block;
+    width: 100%;
+    text-align: center;
+    border-radius:3px ;
+    margin-bottom: 1rem;
+    font: 1.2rem/3rem Microsoft YaHei, Helvetica, Tahoma;
+    outline: none;
+}
+
+
