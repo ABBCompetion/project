@@ -1,0 +1,79 @@
+#content .topText, #content .code, #content .botText {
+    width: 90%;
+    margin: auto;
+    font-size: 1rem;
+    color: #444444;
+}
+#content .topText{
+}
+#content .topText .middle{
+    text-indent: 2rem;
+}
+#content .topText .middle:last-child{
+    line-height: 6rem;
+}
+#content .code{
+    width:80%;
+    text-align: center;
+    margin: auto;
+
+}
+#content .code>*{
+    display: inline-block;
+   float: right;
+    width: 38%;
+
+}
+#content .code>*:first-child{
+    float: left;
+
+}
+#content .code img {
+     width: 100%;
+}
+#content .code>span>div{
+    font-size: .9rem;
+
+}
+#content .botText {
+    clear: both;
+    margin-top: 11rem;
+    margin-bottom: 3rem;
+    text-align: right;
+    line-height: 30px;
+}
+#content .buttons{
+    width: 80%;
+
+    margin: auto;
+    text-align: center;
+}
+#content .buttons >a{
+    display:  block;
+
+    text-align: center;
+    border-radius:3px ;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+#content .buttons .blue{
+    display: none;
+    border: 2px #08609e solid;
+    font-size: 16px;
+}
+
+#content .buttons a.blue:first-child{
+    display: block;
+}
+#content .buttons .white{
+    background-color: white;
+    border: 1px #08609e solid;
+    font-size: 16px;
+}
+#content .buttons:after {
+    content: '请用个人电脑登陆本网站提交作品。';
+    display: block;
+    text-align: left;
+    margin: 0 auto 2rem auto;
+    color: #878787;
+}

@@ -14,10 +14,16 @@
     width:100%;
     text-align: center;
 }
+#content .code>*{
+    display: inline-block;
+    margin: 0 10%;
+}
 #content .code img {
-    max-width: 250px;
-    min-width: 50px;
-    width: 20%
+     width: 150px;
+}
+#content .code>span>div{
+    font-size: 12px;
+
 }
 #content .botText {
     margin-top: 20px;
@@ -36,20 +42,19 @@
     display: inline-block;
     margin: 0 3%;
     width: 25%;
-    background-color: red;
     text-align: center;
     border-radius:3px ;
     line-height: 30px;
     margin-bottom: 60px;
 }
 #content .buttons .blue{
-    background-color: #08609e;
-    color: white;
     border: 2px #08609e solid;
-
+    font-size: 16px;
+    font-weight: bold;
 }
 #content .buttons .white{
     background-color: white;
     border: 1px #08609e solid;
-
+    font-size: 16px;
+    font-weight: bold;
 }
