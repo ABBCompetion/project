@@ -78,10 +78,10 @@ a, div, input, textarea {
     outline: none;
 }
 
-/*统一动画*/
-img {
-    width: 100%;
-}
+/*/!*统一动画*!/*/
+/*img {*/
+    /*width: 100%;*/
+/*}*/
 
 :after, :before {
     -webkit-box-sizing: border-box;
@@ -285,3 +285,9 @@ a {
     color:red;
 }
 
+#main .pswInput img{
+    top: 0.8rem;
+    right: .2rem;
+    position: absolute;
+    float: right;
+}
