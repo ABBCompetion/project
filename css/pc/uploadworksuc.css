@@ -9,6 +9,8 @@
     width: 50%;
     line-height: 35px;
     display: inline-block;
+    *zoom:1;
+    *display: inline;
     word-wrap: break-word;
     color: #08609e;
     vertical-align: middle;

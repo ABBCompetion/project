@@ -21,6 +21,8 @@
 }
 #content  .inputEmail .email{
     display: inline-block;
+    *zoom:1;
+    *display: inline;
     min-width: 255px;
     width: 60%;
     height: 41px;
@@ -30,6 +32,7 @@
     padding-left: 10px;
     border: none;
     font: 14px/24px Microsoft YaHei, Helvetica, Tahoma;
+    vertical-align: middle;
 }
 #content .buttons{
     margin: auto;
@@ -37,6 +40,8 @@
 }
 #content .buttons >*{
     display: inline-block;
+    *zoom:1;
+    *display: inline;
     margin: 0 3%;
     width: 30%;
     text-align: center;

@@ -16,6 +16,8 @@
 }
 #content .code>*{
     display: inline-block;
+    *zoom:1;
+    *display: inline;
     margin: 0 10%;
 }
 #content .code img {
@@ -40,6 +42,8 @@
 }
 #content .buttons >a{
     display: inline-block;
+    *zoom:1;
+    *display: inline;
     margin: 0 3%;
     width: 25%;
     text-align: center;

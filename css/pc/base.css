@@ -57,12 +57,16 @@ a{
 #main .head img{
     margin-left: 36%;
     display: inline-block;
+    *zoom:1;
+    *display: inline;
 }
 #main .head a{
     padding-left:2%;
     color: #07619F;
     font-size: 1.5em;
     display: inline-block;
+    *zoom:1;
+    *display: inline;
 }
 #main .top .line{
     width:100%;
@@ -71,6 +75,8 @@ a{
 .line img{
     width: 100%;
     display: inline-block;
+    *zoom:1;
+    *display: inline;
     height: 1%;
 }
 #middle{
@@ -144,6 +150,8 @@ a{
     text-align: center;
     line-height: 35px;
     display: inline-block;
+    *zoom:1;
+    *display: inline;
     background-color:  #08609e;
 }
 .red{
