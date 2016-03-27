@@ -1,0 +1,49 @@
+.login .content{
+    width: 100%;
+}
+.login .verCode{
+    width:45%;
+    /*min-width:250px;*/
+    margin: auto;
+    height: 1rem;
+}
+.verCode input{
+    width:68%;
+    margin: auto;
+    color:black;
+    background-color:#F5F5F5;
+    height: 2rem;
+    border:none;
+    font-size: 1rem;
+    padding-left: 3%;
+}
+.login .VerCode img{
+    top: -24px;
+    right:10px;
+    position: relative;
+    float: right;
+}
+.login .helpArea{
+    color:#878787;
+    font-size: .8rem;
+    padding-top:1%;
+    width: 45%;
+    height: 2rem;
+    margin: auto;
+}
+.helpArea .remind{
+    margin-top:1%;
+    display: inline-block;
+    float: left;
+}
+.helpArea .forgetPas{
+    display: inline-block;
+    width: 20%;
+    float: right;
+    text-decoration:underline ;
+    padding-left: 20%;
+}
+.helpArea .forgetPas:hover{
+    text-decoration:underline;
+    cursor: pointer;
+}
