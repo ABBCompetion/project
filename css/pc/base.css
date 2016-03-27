@@ -30,7 +30,37 @@ a{
     height: 40px;
     float: right;
 }
-
+#main{
+    width:60%;
+    margin: 3% auto 0 auto;
+}
+#main .top{
+    width:100%;
+    margin: auto;
+}
+#main .top .head{
+    width:100%;
+    margin: auto;
+}
+#main .head img{
+    margin-left: 36%;
+    display: inline-block;
+}
+#main .head a{
+    padding-left:2%;
+    color: #07619F;
+    font-size: 1.5em;
+    display: inline-block;
+}
+#main .top .line{
+    width:100%;
+    margin: auto;
+}
+.line img{
+    width: 100%;
+    display: inline-block;
+    height: 1%;
+}
 #middle{
     min-height: 100px;
     border: 1px solid #d2d2d2;
@@ -54,4 +84,47 @@ a{
     display: block;
     width: 98%;
     margin: auto;
+}
+.commonInput{
+    width:45%;
+    min-width:250px;
+    margin: auto;
+    height: 45px;
+    position: relative;
+}
+.commonInput input{
+    width:97%;
+    margin: auto;
+    color:black;
+    background-color:#F5F5F5;
+    height: 35px;
+    border:none;
+    font-size: 15px;
+    padding-left: 3%;
+}
+#main .pswInput img{
+    top: 10px;
+    right: 3px;
+    position: absolute;
+    float: right;
+}
+#main .verCode{
+    width:45%;
+    min-width:250px;
+    margin: auto;
+    height: 45px;
+}
+.commonBtnArea{
+    width:45%;
+    margin: auto;
+    min-width:250px;
+}
+.commonBtnArea .commonBtn{
+    display: block;
+    padding:2% 42% 1% 42%;
+    height: 30px;
+    margin:auto;
+    background-color: #08609F;
+    font-size: 20px;
+    color:#F6F6F6;
 }

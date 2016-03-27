@@ -1,0 +1,42 @@
+.register .content{
+    width: 100%;
+}
+.register .content .heading{
+    width: 14%;
+    min-width: 57px;
+    color:red;
+    font-size: 14px;
+    margin: auto;
+    margin-top: 1%;
+}
+.register .selectArea{
+    color:#878787;
+    font-size: .4em;
+    padding-top:3%;
+    width: 45%;
+    min-width: 250px;
+    height: 30px;
+    margin: auto;
+    padding-bottom:2%;
+}
+.register .choice{
+    margin-top: 1%;
+    display: inline-block;
+}
+.register .selectArea p{
+    display: inline-block;
+}
+#registerBtn{
+    margin-top: 3%;
+}
+.register .goLogin{
+    font-size: 12px;
+    padding-top:2%;
+    width: 45%;
+    min-width: 250px;
+    height: 30px;
+    margin: auto;
+}
+.goLogin a{
+    color:#1367A3;
+}
