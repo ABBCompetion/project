@@ -42,6 +42,17 @@ a{
     width:100%;
     margin: auto;
 }
+#main .top .textHead{
+    width:100%;
+    margin: auto;
+}
+#main .textHead a{
+    color: #07619F;
+    font-size: 1.5em;
+    display: block;
+    width: 120px;
+    margin: auto;
+}
 #main .head img{
     margin-left: 36%;
     display: inline-block;
@@ -120,11 +131,17 @@ a{
     min-width:250px;
 }
 .commonBtnArea .commonBtn{
-    display: block;
-    padding:2% 42% 1% 42%;
-    height: 30px;
-    margin:auto;
-    background-color: #08609F;
-    font-size: 20px;
+    width:100%;
+}
+.blue_btn{
+    border:none;
     color:#F6F6F6;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    display: inline-block;
+    background-color:  #08609e;
+}
+.red{
+    color:red;
 }

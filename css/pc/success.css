@@ -51,12 +51,13 @@
     width:100%;
 }
 .success .selectBtn{
-    display: inline-block;
-    width: 45%;
-    padding:2% 0 2% 0;
+    border:none;
+    color:#F6F6F6;
     text-align: center;
+    width: 140px;
+    line-height: 35px;
+    display: inline-block;
     background-color: #08609F;
     font-size: 14px;
-    color: #F6F6F6;
     cursor: pointer;
 }

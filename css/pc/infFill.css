@@ -1,0 +1,144 @@
+.infFill .content{
+    width: 100%;
+    margin: auto;
+}
+.infFill  .heading{
+    width: 90px;
+    color:red;
+    font-size: 14px;
+    margin:auto;
+}
+.infFill .selectArea{
+    color:#878787;
+    font-size: .4em;
+    padding-top:3%;
+    width: 45%;
+    min-width: 250px;
+    height: 30px;
+    margin: auto;
+    margin-left: 30%;
+    padding-bottom:2%;
+}
+.infFill .content .selectArea input{
+    display: inline-block;
+    margin-left: 3px;
+    padding-left: 20px;
+}
+.infFill .content .selectArea p{
+    display: inline-block;
+    margin: auto;
+}
+.infFill .content .input_area{
+    width: 500px;
+    margin-top:2px;
+    margin-left:4% ;
+    height: 38px;
+}
+.infFill .content .input_area .radio_style{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+.infFill .content .input_area .fir_radio_style{
+    margin-left: 13px;
+}
+.infFill .content .input_area .input_value{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.infFill .content .inf_span{
+    display: inline-block;
+    margin: auto;
+    width: 125px;
+    font-size: 13px;
+    text-align: right;
+}
+.infFill .content .inf_input{
+    margin-left: 10px;
+    padding-left: 8px;
+    width: 320px;
+    height: 38px;
+    color:black;
+    background-color:#F5F5F5;
+    border:none;
+}
+.infFill .content .time_input{
+    width: 100px;
+}
+.infFill .content .second_member{
+    margin-top: 50px;
+}
+.infFill .content .add_member_btn{
+    width: 130px;
+    margin: auto;
+    margin-top: 35px;
+    cursor: pointer;
+}
+.infFill .content .topic_area{
+    height: 85px;
+    margin-top: 40px;
+}
+.infFill .content .third_member{
+     margin-top: 15px;
+ }
+.infFill .content .topic_text{
+    height: 50px;
+    margin-top: 5px;
+    width: 135px;
+}
+.infFill .content .choose_topic{
+    height: 80px;
+    display: inline-block;
+    width: 320px;
+    margin-top: 4px;
+    margin-left: 10px;
+    position: absolute;
+    font-size: 13px;
+}
+.infFill .content .choose_topic .input_icon{
+    margin-top: 4px;
+}
+.choose_topic ul li{
+    list-style: none;
+    width: 340px;
+}
+.choose_topic .first_a,.choose_topic .second_a{
+
+    font-size: 13px;
+    text-align: center;
+    line-height: 35px;
+    display: inline-block;
+}
+.choose_topic .first_a{
+    width: 120px;
+}
+.choose_topic .second_a{
+    width: 200px;
+}
+.choose_topic .a_style1{
+    background-color:  #65B2E0;
+    color:#F6F6F6;
+}
+.choose_topic .a_style2{
+    background-color:#F6F6F6;
+    color:#65B2E0;
+}
+.infFill .content .getInf_area{
+    height: 180px;
+}
+.infFill .btnArea{
+    width:100%;
+    margin-left:20% ;
+}
+.infFill .selectBtn{
+    border:none;
+    color:#F6F6F6;
+    text-align: center;
+    width: 160px;
+    line-height: 35px;
+    display: inline-block;
+    background-color: #08609F;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left:10px ;
+}
