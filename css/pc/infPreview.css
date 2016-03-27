@@ -1,0 +1,67 @@
+.infPreview .content{
+    width: 100%;
+    margin: auto;
+}
+.infPreview .preview_textHead{
+    width:100%;
+    margin: auto;
+}
+.infPreview .preview_textHead a{
+    color: #07619F;
+    font-size: 1.5em;
+    display: block;
+    width: 195px;
+    margin: auto;
+}
+.infPreview .textArea{
+    width: 500px;
+    margin:auto;
+    height: 30px;
+    font-size: 14px;
+    color: #8B8B8B;
+    margin-left: 21%;
+    margin-top: 1px;
+}
+.infPreview .txt{
+    display: inline-block;
+    width:240px;
+}
+.infPreview .textArea .title1{
+    width: 80px;
+
+}
+.infPreview .textArea .title2{
+    width: 80px;
+    margin-left: 10px;
+
+}
+.infPreview .textArea .infText1,.infPreview .textArea .infText2{
+    width: 160px;
+    margin-left: 2px;
+
+}
+.infPreview .first_man ,.infPreview .second_man ,.infPreview .third_man ,.infPreview .other{
+    margin-top: 20px;
+}
+.infPreview .other{
+    padding-bottom: 10%;
+}
+.infPreview .btnArea{
+    width:100%;
+    margin-left:20% ;
+}
+.infPreview .selectBtn{
+    border:none;
+    color:#F6F6F6;
+    text-align: center;
+    width: 160px;
+    line-height: 35px;
+    display: inline-block;
+    background-color: #08609F;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left:10px ;
+}
+.infPreview .btnArea{
+    margin-left: 25%;
+}
