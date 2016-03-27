@@ -1,0 +1,20 @@
+#content>div{
+    width: 100%;
+    text-align: center;
+}
+#content>div>span {
+    text-align: left;
+    font-size: 2rem;
+    width: 80%;
+    line-height: 3rem;
+    display: inline-block;
+    word-wrap: break-word;
+    color: #08609e;
+    vertical-align: middle;
+}
+#content img{
+    width: 6rem;
+
+    vertical-align: middle;
+    margin-right: 1%;
+}

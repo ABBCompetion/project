@@ -27,11 +27,9 @@
 
     width: 65%;
     height: 3rem;
-    outline: none;
     background-color: #f5f5f5;
     color: rgb(153, 153, 153);
     padding-left: 1rem;
-    border: none;
     font: 1rem/1.5rem Microsoft YaHei, Helvetica, Tahoma;
 }
 #content .buttons{

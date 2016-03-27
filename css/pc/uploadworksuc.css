@@ -1,0 +1,21 @@
+#content>div{
+    width: 100%;
+    margin: 200px auto;
+    text-align: center;
+}
+#content>div>span {
+    text-align: left;
+    font-size: 28px;
+    width: 50%;
+    line-height: 35px;
+    display: inline-block;
+    word-wrap: break-word;
+    color: #08609e;
+    vertical-align: middle;
+}
+#content img{
+    width: 84px;
+    height: 68px;
+    vertical-align: middle;
+    margin-right: 1%;
+}

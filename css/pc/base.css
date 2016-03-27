@@ -92,6 +92,9 @@ a{
     margin: auto;
     margin-top: 10px;
 }
+.commonArea > .bgM{
+    display: none;
+}
 .commonArea>img.bg{
     display: block;
     width: 98%;

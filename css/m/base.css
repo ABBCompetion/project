@@ -183,7 +183,6 @@ a {
     background-color: white;
     padding: 2%;
     height: 100%;
-
 }
 
 #head {
@@ -213,7 +212,8 @@ a {
 }
 
 .commonArea {
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
+
 }
 
 .commonArea > div {
@@ -231,11 +231,9 @@ a {
 }
 
 .commonArea > .bgM {
-    background: url("../../img/bgM.jpg") no-repeat center;
     width: 95%;
-    height: 7.5rem;
-    background-size: contain;
-
+    margin: auto;
+    display: block;
 }
 .commonInput{
     width:45%;
