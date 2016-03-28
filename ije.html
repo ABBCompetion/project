@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<input type="text" placeholder="30个字以内"/>
+
+<script src="js/jquery.min.js"></script>
+<script>
+
+    if (!("placeholder" in document.createElement("input"))) {
+        $('input').each(function () {
+            $(this).val($(this).attr("placeholder"));
+            $(this).css('color','grey');
+
+            $(this).focus(function () {
+                $(this).val('');
+                $(this).css('color','black');
+            });
+            $(this).blur(function () {
+                if( !$(this).val()||$(this).val()===$(this).attr("placeholder")){
+                    $(this).val($(this).attr("placeholder"));
+                    $(this).css('color','grey');
+                }
+            });
+        });
+    }
+
+</script>
+</body>
+</html>
