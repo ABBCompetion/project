@@ -13,7 +13,8 @@
 }
 #content  .inputEmail>span{
     font-size: 14px;
-    
+    vertical-align: middle;
+
 }
 #content  .inputEmail>span:first-child {
     color: red;
@@ -31,7 +32,7 @@
     color: rgb(153, 153, 153);
     padding-left: 10px;
     border: none;
-    font: 14px/24px Microsoft YaHei, Helvetica, Tahoma;
+    font: 14px/41px Microsoft YaHei, Helvetica, Tahoma;
     vertical-align: middle;
 }
 #content .buttons{
@@ -39,6 +40,7 @@
     text-align: center;
 }
 #content .buttons >*{
+    vertical-align: middle;
     display: inline-block;
     *zoom:1;
     *display: inline;
@@ -48,9 +50,13 @@
     border-radius:3px ;
     line-height: 30px;
     margin-bottom: 100px;
-
-    border: 2px #08609e solid;
+    outline-width: 0px;
+    border: none;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
+}
+#content .buttons >a{
+    line-height: 35px;
 }
 

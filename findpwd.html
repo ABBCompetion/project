@@ -51,17 +51,46 @@
             <form method="POST" action="http://www.baidu.com">
                 <div class="inputEmail">
                     <span>*</span><span>Email</span>
-                    <input  class="email" type="text" value="请填写注册时使用的邮箱地址"/>
+                    <input  class="email" type="text" placeholder="请填写注册时使用的邮箱地址"/>
                 </div>
                 <div class="buttons">
-                    <input type="submit" class="blue blue_btn" value="提交">
-                    <a href="javascript:;" class="blue blue_btn"  >返回</a>
+                    <a href="javascript:;" class="blue blue_btn"  >提交</a>
+                    <a href="login.html" class="blue blue_btn"  >返回</a>
                 </div>
             </form>
         </div>
     </div>
     <div id="footer"> © 版权所有 2016 ABB | 供应商信息/版本说明 | Cookie和隐私政策</div>
 </div>
+<script src="js/jquery.min.js"></script>
+<script src='js/placeholderfriend.js'></script>
+<script src="js/checkinput.js"></script>
+<script>
+    $('.buttons>a').eq(0).click(function () {
+        if(!CheckInput.email($('.email').val())){
+            alert('Email格式不正确');
+        }
+        else{
+            $.ajax({
+                url:'http://abbinnovation.careerstart.cn/checkemail.asp',
+                dataType:'html',
+                type:'GET',
+                data:{email:$('.email').val()},
+                success: function (data) {
+                    if(data==='1'){
+                        alert('密码已发送至邮箱');
+                    }
+                    else{
+                        alert('邮箱错误');
+                    }
+                },
+                error: function () {
+                    alert('网络错误');
+                }
+            })
+        }
 
+    })
+</script>
 </body>
 </html>
