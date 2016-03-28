@@ -90,7 +90,11 @@
                     </div>
                     <div class="input_area">
                         <span class="inf_span"><span class="red">*</span>作品上传</span>
-                        <input class="inf_input" type="" placeholder="格式:Word/PDF，不超过5兆">
+                        <a href="javascript:;" class="a-upload"><input class="inf_input" id="uploadFile" type="file"  accept=".doc,.docx,.pdf" >格式:Word/PDF，不超过10兆</a>
+                    </div>
+                    <div class="input_area">
+                        <span class="inf_span"><span class="red">*</span>视频链接</span>
+                        <input class="inf_input" type="text" >
                     </div>
                 </div>
                 <div class="btnArea">
@@ -102,8 +106,38 @@
     </div>
     <div id="footer">  © 版权所有 2016 ABB | 供应商信息/版本说明 | Cookie和隐私政策</div>
 </div>
+<script src="js/jquery.min.js"></script>
+<script src='js/placeholderfriend.js'></script>
+<script type="text/javascript">
+//    function _s() {
+//        var f = document.getElementById("uploadFile").files;
+//        $(f).change (function () {
+//            console.log(f[0].size);
+//            //类型
+//            console.log(f[0].type);
+//        })
+//
+//    }
+//
+//        _s()
+function a(){
 
-<!--<script src="js/zepto.min.js"></script>-->
+    var files = $('#uploadFile').prop('files');//获取到文件列表
 
+    if(files.length == 0){
+        alert('请选择文件');
+        return;
+    }else{
+        var f = document.getElementById("uploadFile").files;
+            console.log(f[0].size);
+            console.log(f[0].type);
+
+    }
+
+
+}
+    $('#uploadFile').live('change',a)
+
+</script>
 </body>
 </html>

@@ -29,6 +29,7 @@ a{
     background: url("../../img/logo.png") no-repeat center;
     width: 208px;
     height: 40px;
+    display: inline-block;
     float: right;
 }
 #main{
