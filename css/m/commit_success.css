@@ -1,0 +1,64 @@
+.commit_success .content{
+    width: 100%;
+    margin: auto;
+}
+.commit_success .content .text {
+    min-width: 300px;
+    position: relative;
+    width: 61%;
+    margin: auto;
+    margin-top: 8%;
+}
+.commit_success .text_head{
+    margin-top: 4%;
+    position: relative;
+}
+.commit_success .content .successImg {
+    position: relative;
+    display: inline-block;
+    margin-left: 7%;
+    width: 3rem;
+    position: absolute;
+    margin-top: -8px;
+}
+.commit_success h2{
+    display: inline-block;
+    color: red;
+    margin-left: 24%;
+    padding-bottom: 7%;
+    width: 100%;
+    font-size: 1.5rem;
+
+}
+.commit_success p{
+    font-size: 14px;
+    color:#8B8B8B;
+    padding-bottom: 2%;
+    line-height: 25px;
+}
+.commit_success .btnArea{
+    margin: auto;
+    margin-top: 30%;
+    padding-bottom: 5%;
+    width: 21rem;
+
+}
+.commit_success .selectBtn{
+    border: none;
+    color: #F6F6F6;
+    text-align: center;
+    width: 21rem;
+    line-height: 35px;
+    display: inline-block;
+    background-color: #08609F;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.commit_success .remind{
+    font-size: 13px;
+   /* margin-left: 6%;*/
+}
+.commit_success .time{
+    color:#F18509;
+}

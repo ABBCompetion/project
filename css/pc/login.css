@@ -1,3 +1,6 @@
+.login{
+    padding-bottom: 5%;
+}
 .login .content{
     width: 100%;
 }
@@ -26,6 +29,7 @@
 .login .helpArea{
     color:#878787;
     font-size: 12px;
+    line-height: 16px;
     padding-top:1%;
     width: 45%;
     min-width: 250px;
@@ -47,4 +51,7 @@
 .helpArea .forgetPas:hover{
     text-decoration:underline;
     cursor: pointer;
+}
+.login .bottom_Area{
+    display: none;
 }

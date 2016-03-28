@@ -1,12 +1,7 @@
-.infFill {
-    min-width: 600px;
-    padding-bottom: 5%;
-}
-.infFill .content {
+.infFill .content{
     width: 100%;
     margin: auto;
 }
-
 .infFill  .heading{
     width: 90px;
     color:red;
@@ -15,13 +10,12 @@
 }
 .infFill .selectArea{
     color:#878787;
-    font-size: 13px;
+    font-size: .4em;
     padding-top:3%;
     width: 45%;
     min-width: 250px;
     height: 30px;
     margin: auto;
-    margin-left: 143px;
     padding-bottom:2%;
 }
 .infFill .content .selectArea input{
@@ -34,10 +28,10 @@
     margin: auto;
 }
 .infFill .content .input_area{
-    width: 600px;
-    margin-top:2px;
+    width: 90%;
     height: 38px;
-    font-size: 14px;
+    margin: auto;
+    margin-top:2px;
 }
 .infFill .content .input_area .radio_style{
     margin-left: 20px;
@@ -51,27 +45,24 @@
     font-size: 12px;
     margin-left: 5px;
 }
-
 .infFill .content .inf_span{
     display: inline-block;
     margin: auto;
-    width:130px;
+    width: 22%;
     font-size: 13px;
-    text-align: right;
+    text-align: left;
 }
 .infFill .content .inf_input{
     margin-left: 10px;
     padding-left: 8px;
-    font-size: 14px;
-    width: 320px;
+    width: 70%;
     height: 38px;
     color:black;
     background-color:#F5F5F5;
     border:none;
 }
-
 .infFill .content .time_input{
-    width: 100px;
+    width: 27%;
 }
 .infFill .content .second_member{
     margin-top: 50px;
@@ -83,24 +74,23 @@
     cursor: pointer;
 }
 .infFill .content .topic_area{
-    height: 85px;
+    height: 8rem;
     margin-top: 40px;
+    position: relative;
 }
 .infFill .content .third_member{
     margin-top: 15px;
 }
 .infFill .content .topic_text{
-    height: 50px;
     margin-top: 5px;
-    width:140px;
+    width: 100%;
+    display: block;
 }
 .infFill .content .choose_topic{
     height: 80px;
-    display: inline-block;
-    width: 320px;
-    margin-top: 4px;
+    width: 70%;
+    margin-top: 1rem;
     margin-left: 10px;
-    position: absolute;
     font-size: 13px;
 }
 .infFill .content .choose_topic .input_icon{
@@ -108,13 +98,7 @@
 }
 .choose_topic ul li{
     list-style: none;
-    width: 340px;
-}
-.choose_topic ul li input{
-    display: none;
-}
-.choose_topic ul li label{
-    cursor: pointer;
+    width: 300px;
 }
 .choose_topic .first_a,.choose_topic .second_a{
 
@@ -124,10 +108,10 @@
     display: inline-block;
 }
 .choose_topic .first_a{
-    width: 120px;
+    width: 35%;
 }
 .choose_topic .second_a{
-    width: 200px;
+    width: 65%;
 }
 .choose_topic .a_style1{
     background-color:  #65B2E0;
@@ -138,25 +122,22 @@
     color:#65B2E0;
 }
 .infFill .content .getInf_area{
-    height: 180px;
+    height: 13rem;
+    position: relative;
 }
 .infFill .btnArea{
     width:100%;
-    margin-left:20% ;
 }
 .infFill .selectBtn{
     border:none;
     color:#F6F6F6;
     text-align: center;
-    width: 160px;
+    width: 19rem;
     line-height: 35px;
-    display: inline-block;
+    display:block;
     background-color: #08609F;
-    font-size: 14px;
+    font-size: 1.2rem;
     cursor: pointer;
-    margin-left:10px ;
+    margin: auto;
+    margin-top: 1rem;
 }
-.infInnovation .content .inf_span,.infInnovation .content .topic_text{
-    width:205px;
-}
-

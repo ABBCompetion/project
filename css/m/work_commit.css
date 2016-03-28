@@ -1,0 +1,116 @@
+.work_commit{
+    padding-bottom: 5%;
+    min-width: 305px;
+}
+.work_commit .content{
+    width: 100%;
+    margin: auto;
+}
+.work_commit .commit_title{
+    width: 100%;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.work_commit .content .tick{
+    display: none;
+    margin-left:12%;
+    width: 10%;
+}
+
+.work_commit .content .text{
+    /* position: relative; */
+    width: 300px;
+    /* margin-left: 23%; */
+    font-size: 1.2rem;
+    margin: auto;
+}
+.work_commit h2{
+    margin-top: 1%;
+    margin-left:12%;
+}
+.work_commit .title_fir{
+    margin-left: 23%;
+}
+.work_commit .title_fir span{
+    color:red;
+}
+.work_commit .title_sec{
+    padding-bottom: 4%;
+
+}
+.work_commit .work_information{
+    width: 100%;
+    margin:auto ;
+}
+.work_commit .title{
+    margin-top: 5%;
+    width: 6rem;
+    margin: auto;
+    height: 38px;
+    font-size: 16px;
+}
+.work_commit .content .input_area{
+    width: 100%;
+    margin-top:2px;
+    height: 38px;
+}
+.work_commit .content .inf_span{
+    display: inline-block;
+    margin: auto;
+    width: 20%;
+    font-size: 13px;
+    text-align: right;
+    vertical-align: top;
+}
+.work_commit .content .half_input1{
+    margin-left: 10px;
+}
+.work_commit .content .half_input{
+    padding-left: 8px;
+    width: 33%;
+    height: 38px;
+    color:black;
+    background-color:#F5F5F5;
+    border:none;
+}
+.work_commit .content .inf_input{
+    margin-left: 10px;
+    padding-left: 8px;
+    width: 66%;
+    height: 38px;
+    color:black;
+    background-color:#F5F5F5;
+    border:none;
+}
+.work_commit .content .text_area{
+    height: 120px;
+}
+.work_commit .content .inf_textArea{
+    margin-left: 10px;
+    padding-left: 8px;
+    width: 66%;
+    height: 120px;
+    color:black;
+    background-color:#F5F5F5;
+    border:none;
+    margin-bottom: 10%;
+}
+.work_commit .btnArea{
+    width: 19rem;
+    margin: auto;
+ }
+.work_commit .selectBtn{
+    border: none;
+    color: #F6F6F6;
+    text-align: center;
+    width: 19rem;
+    line-height: 35px;
+    display: inline-block;
+    background-color: #08609F;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 1rem;
+
+}

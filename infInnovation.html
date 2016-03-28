@@ -6,18 +6,16 @@
           content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width">
     <meta name="format-detection" content="telephone=no,email=no,address=no">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="填写信息">
+    <meta name="apple-mobile-web-app-title" content="挑战赛信息填写">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>填写信息</title>
-    <!--[if !IE]><!-->
+    <title>挑战赛信息填写</title>
 
     <link media="screen and (max-width:640px)" rel="stylesheet" href="css/m/base.css"/>
     <link media="screen and (max-width:640px)" rel="stylesheet" href="css/m/infFill.css"/>
     <link media="screen and (min-width:641px)" rel="stylesheet" href="css/pc/base.css"/>
     <link media="screen and (min-width:641px)" rel="stylesheet" href="css/pc/infFill.css"/>
-    <!--<![endif]-->
 
     <!--[if IE]>
     <link rel="stylesheet" href="css/pc/base.css"/>
@@ -40,60 +38,101 @@
     </div>
     <div id="middle">
         <div class="commonArea">
-            <div><div>2016年ABB大学生创新大赛</div></div>
+            <div>
+                <div>2016年ABB大学生创新大赛</div>
+            </div>
             <img src="img/bg.jpg" alt="" class="bg"/>
-            <div class="bgM"></div>
+            <img src="img/bgM.jpg" alt="" class="bgM"/>
         </div>
-        <div id="content"></div>
-    </div>
-    <div id="main" class="infFill">
-        <div class="top">
-            <div class="textHead"><a>创新挑战赛</a></div>
-            <div class="line"><img src="img/line.png"></div>
-        </div>
-        <div style="height: 20px"></div>
-        <form>
-            <div class="content">
-                <div class="input_area">
-                    <span class="inf_span"><span class="red">*</span>中文姓名</span>
-                    <input class="inf_input" type="text" placeholder="请填写真实姓名，提交后不可更改">
+        <div id="content">
+            <div id="main" class="infFill infInnovation">
+                <div class="top">
+                    <div class="textHead"><a>创新挑战赛</a></div>
+                    <div class="line"><img src="img/line.png"></div>
                 </div>
-                <div class="input_area">
-                    <span class="inf_span"><span class="red">*</span>性别</span>
-                    <input class="fir_radio_style" type="radio"><span class="input_value">男</span>
-                    <input class="radio_style" type="radio"><span class="input_value">女</span>
-                </div>
-                <div class="input_area">
-                    <span class="inf_span"><span class="red">*</span>团体人数</span>
-                    <input style="display: none" class="inf_input"  type="text" value="1">
-                    <select class="inf_input">
-                        <option value="1">1人</option>
-                        <option value="2">2人</option>
-                        <option value="3">3人</option>
-                        <option value="4">4人</option>
-                        <option value="5">5人</option>
-                        <option value="6">6人</option>
-                    </select>
-                </div>
-            </div>
-            <div class="input_area">
-                <span class="inf_span"><span class="red">*</span>手机号码</span>
-                <input class="inf_input"  type="text" placeholder="请填写有效的手机号码，提交后不可更改">
-            </div>
-            <div class="input_area">
-                <span class="inf_span">邮箱</span>
-                <input class="inf_input"  type="text">
-            </div>
-            <div class="btnArea">
-                <a class="selectBtn">确认</a>
-                <a class="selectBtn">返回</a>
-            </div>
+                <div style="height: 20px"></div>
+                <form>
+                    <div class="content">
+                        <div class="input_area">
+                            <span class="inf_span"><span class="red">*</span>中文姓名</span>
+                            <input class="inf_input" type="text" placeholder="请填写真实姓名，提交后不可更改">
+                        </div>
+                        <div class="input_area">
+                            <span class="inf_span"><span class="red">*</span>性别</span>
+                            <input class="fir_radio_style" type="radio"><span class="input_value">男</span>
+                            <input class="radio_style" type="radio"><span class="input_value">女</span>
+                        </div>
+                        <div class="input_area">
+                            <span class="inf_span"><span class="red">*</span>团体人数</span>
+                            <input style="display: none" class="inf_input"  type="text" value="1">
+                            <select class="inf_input">
+                                <option value="1">1人</option>
+                                <option value="2">2人</option>
+                                <option value="3">3人</option>
+                                <option value="4">4人</option>
+                                <option value="5">5人</option>
+                                <option value="6">6人</option>
+                            </select>
+                        </div>
 
-            <input type="checkbox" value="ABB官网" style="border: none"/>
-            <input type="checkbox" value="ABB官方微信/招聘官方微信"/>
-        </form>
-        <div class="content"></div>
+                        <div class="input_area">
+                            <span class="inf_span"><span class="red">*</span>手机号码</span>
+                            <input class="inf_input"  type="text" placeholder="请填写有效的手机号码，提交后不可更改">
+                        </div>
+                        <div class="input_area">
+                            <span class="inf_span">邮箱</span>
+                            <input class="inf_input"  type="text">
+                        </div>
+                        <div class="input_area">
+                            <span class="inf_span"><span class="red">*</span>是否已组建公司</span>
+                            <input class="fir_radio_style" type="radio"><span class="input_value">是</span>
+                            <input class="radio_style" type="radio"><span class="input_value">否</span>
+                        </div>
+                        <div class="input_area">
+                            <span class="inf_span"><span class="red">*</span>是否已有资助资金</span>
+                            <input class="fir_radio_style" type="radio"><span class="input_value">是</span>
+                            <input class="radio_style" type="radio"><span class="input_value">否</span>
+                        </div>
+                        <div class="input_area">
+                            <span class="inf_span"><span class="red">*</span>是否已或正在申请专利或知识产权</span>
+                            <input class="fir_radio_style" type="radio"><span class="input_value">是</span>
+                            <input class="radio_style" type="radio"><span class="input_value">否</span>
+                        </div>
+                        <div class="input_area">
+                            <span class="inf_span"><span class="red">*</span>是否已有作品原型或产品演示</span>
+                            <input class="fir_radio_style" type="radio"><span class="input_value">是</span>
+                            <input class="radio_style" type="radio"><span class="input_value">否</span>
+                        </div>
+                        <div class="input_area getInf_area">
+                            <span class="inf_span topic_text"><span class="red">*</span>如何获取ABB大赛信息</span>
+                            <div class="choose_topic">
+                                <ul>
+                                    <li><input type="checkbox" /><label><a class="first_a a_style1">ABB官网</a></label>
+                                        <input type="checkbox" /><label><a class="second_a a_style2">ABB官方微信/招聘官方微信</a></label>
+                                    </li>
+                                    <li><input type="checkbox" /><label><a class="first_a a_style2">校园BBS</a></label>
+                                        <input type="checkbox" /><label><a class="second_a a_style1">院系老师/院系网站</a></label>
+                                    </li>
+                                    <li><input type="checkbox" /><label><a class="first_a a_style1">海报</a></label>
+                                        <input type="checkbox" /><label><a class="second_a a_style2">应届生网站</a></label>
+                                    </li>
+                                    <li><input type="checkbox" /><label><a class="first_a a_style2">大赛官方QQ平台</a></label>
+                                        <input type="checkbox" /><label><a class="second_a a_style1">其他微信公众账号</a></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="btnArea">
+                            <input class="selectBtn" value="确定">
+                            <a class="selectBtn">返回</a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
     </div>
+
     <div id="footer">  © 版权所有 2016 ABB | 供应商信息/版本说明 | Cookie和隐私政策</div>
 </div>
 
