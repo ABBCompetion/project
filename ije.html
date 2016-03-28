@@ -5,29 +5,11 @@
     <title></title>
 </head>
 <body>
-<input type="text" placeholder="30个字以内"/>
+<input class="dd d" placeholder="账号/手机号码" ><br>
+<input placeholder="密码" type="password" >
 
 <script src="js/jquery.min.js"></script>
-<script>
+<script src='js/placeholderfriend.js'></script>
 
-    if (!("placeholder" in document.createElement("input"))) {
-        $('input').each(function () {
-            $(this).val($(this).attr("placeholder"));
-            $(this).css('color','grey');
-
-            $(this).focus(function () {
-                $(this).val('');
-                $(this).css('color','black');
-            });
-            $(this).blur(function () {
-                if( !$(this).val()||$(this).val()===$(this).attr("placeholder")){
-                    $(this).val($(this).attr("placeholder"));
-                    $(this).css('color','grey');
-                }
-            });
-        });
-    }
-
-</script>
 </body>
 </html>
