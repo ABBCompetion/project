@@ -159,3 +159,7 @@ a{
 .red{
     color:red;
 }
+input,select,textarea{
+    font-family:  Microsoft YaHei, Helvetica, Tahoma;
+    outline: none;
+}

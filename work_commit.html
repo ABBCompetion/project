@@ -62,46 +62,58 @@
                 </div>
                 <p class="title">作品信息</p>
 
-                <form method="POST" action="previewwork.html">
+                <form method="POST" runat="server" enctype="multipart/form-data" action="previewwork.html">
 
 
                     <div class="work_information">
                         <div class="input_area">
-                            <span class="inf_span"><span class="red">*</span>课题名称</span>
-                            <input name="" class="half_input half_input1" style="display: none" type="text">
-                            <select class="half_input half_input1">
-                                <option value="智慧能源">智慧能源</option>
-                                <option value="智能建筑">智能建筑</option>
-                                <option value="智能机器人技术">智能机器人技术</option>
-                            </select>
-                            <input class="half_input" style="display: none" type="text">
-                            <select class="half_input select2">
-                                <option value="智能配网和微网技术">智能配网和微网技术</option>
-                                <option value="电能转换技术">电能转换技术</option>
-                                <option value="智慧节能技术">智慧节能技术</option>
+                            <!--创新赛-->
+                            <!--<span class="inf_span"><span class="red">*</span>课题名称</span><select name="title_parent" class="half_input half_input1">&ndash;&gt;-->
+                            <!--<option value="智慧能源">智慧能源</option>-->
+                            <!--<option value="智能建筑">智能建筑</option>-->
+                            <!--<option value="智能机器人技术">智能机器人技术</option>-->
+                        <!--</select>-->
+                            <!--<select name="title_child" class="half_input select2">-->
+                                <!--<option value="智能配网和微网技术">智能配网和微网技术</option>-->
+                                <!--<option value="电能转换技术">电能转换技术</option>-->
+                                <!--<option value="智慧节能技术">智慧节能技术</option>-->
+                            <!--</select>-->
+                            <!--挑战赛-->
+                            <span class="inf_span"><span class="red">*</span>课题名称</span><select name="title_child" class="half_input half_input1" id="tiaozan">
+                                <option value="简洁自然的人机交互">简洁自然的人机交互</option>
+                                <option value="机器智能和机器学习">机器智能和机器学习</option>
+                                <option value="机器人生态系统">机器人生态系统</option>
                             </select>
                         </div>
                         <div class="input_area">
-                            <span class="inf_span"><span class="red">*</span>作品名称</span>
-                            <input class="inf_input" type="text" placeholder="30个字以内">
+                            <span class="inf_span"><span class="red">*</span>作品名称</span><input name="workname"
+                                                                                               class="inf_input"
+                                                                                               type="text"
+                                                                                               placeholder="30个字以内">
                         </div>
                         <div class="input_area text_area ">
-                            <span class="inf_span"><span class="red">*</span>作品简介</span>
-                            <textarea class="inf_textArea" type="text" placeholder="300个字以内"></textarea>
+                            <span class="inf_span"><span class="red">*</span>作品简介</span><textarea name="workintro"
+                                                                                                  class="inf_textArea"
+                                                                                                  type="text"
+                                                                                                  placeholder="300个字以内"></textarea>
                         </div>
                         <div class="input_area">
-                            <span class="inf_span"><span class="red">*</span>作品上传</span>
-                            <a href="javascript:;" class="a-upload"><input name="file" class="inf_input" id="uploadFile" type="file"
-                                                                           accept=".doc,.docx,.pdf">格式:Word/PDF，不超过10兆</a>
+                            <span class="inf_span"><span class="red">*</span>作品上传</span><a href="javascript:;"
+                                                                                           class="a-upload"><input
+                                name="file" class="inf_input" id="uploadFile"
+                                type="file"
+                                accept=".doc,.docx,.pdf">格式:Word/PDF，不超过10兆</a>
                         </div>
                         <div class="input_area">
-                            <span class="inf_span"><span class="red">*</span>视频链接</span>
-                            <input class="inf_input" type="text">
+                            <span class="inf_span"><span class="red">*</span>视频链接</span><input name="video"
+                                                                                               class="inf_input"
+                                                                                               type="text">
                         </div>
                     </div>
+                    <div class="tip">在2016年7月24日前可重复提交作品，作品以最后一次提交为准。</div>
                     <div class="btnArea">
-                        <input type="submit" class="selectBtn" value="填写参赛信息">
-                        <a href="javascript:;" class="selectBtn">暂不填写</a>
+                        <input type="submit" class="selectBtn" value="提交">
+                        <a href="javascript:;" class="selectBtn">返回</a>
                     </div>
                 </form>
             </div>
@@ -113,40 +125,30 @@
 <script src='js/placeholderfriend.js'></script>
 <script type="text/javascript">
     var Work_commit = {};
-    function a() {
 
-        var files = $('#uploadFile').prop('files');//获取到文件列表
-
-        if (files.length == 0) {
-            alert('请选择文件');
+    $('#uploadFile').on('change', function () {
+        var f = document.getElementById("uploadFile").files;
+        if (f[0].size > 10000000) {
+            alert('请选择不超过10兆的文件');
+            $('.a-upload').text('格式:Word/PDF，不超过10兆')
             return;
-        } else {
-            var f = document.getElementById("uploadFile").files;
-
-            if (f[0].size > 10000000) {
-                alert('请选择不超过10兆的文件');
-                f = null;
-                return;
-            }
-            else if (f[0].type.indexOf('pdf') < 0 && f[0].type.indexOf('word') < 0) {
-                alert('请选择Word/PDF格式的文件');
-                f = null;
-                return;
-            }
         }
-        $('#uploadFile').replaceWith('<input class="inf_input" id="uploadFile" type="file" accept=".doc,.docx,.pdf">');
-        $('#uploadFile').on('change', a);
+        else if (f[0].type.indexOf('pdf') < 0 && f[0].type.indexOf('word') < 0) {
+            alert('请选择Word/PDF格式的文件');
+            $('.a-upload').text('格式:Word/PDF，不超过10兆')
+            return;
+        }
 
-    }
-    $('#uploadFile').on('change', a);
+        $('.a-upload').text(f[0].name)
+    });
 
 
     $('select.half_input1').change(function () {
-        var index= $('select.half_input1 option:selected').index();
-        var select2=$('.select2');
-        switch (index){
+        var index = $('select.half_input1 option:selected').index();
+        var select2 = $('.select2');
+        switch (index) {
             case 0:
-                    select2.html('<option value="智能配网和微网技术">智能配网和微网技术</option><option value="电能转换技术">电能转换技术</option><option value="智慧节能技术">智慧节能技术</option>')
+                select2.html('<option value="智能配网和微网技术">智能配网和微网技术</option><option value="电能转换技术">电能转换技术</option><option value="智慧节能技术">智慧节能技术</option>')
                 break;
             case 1:
                 select2.html('<option value="楼宇智能化">楼宇智能化</option><option value="家庭自动化，信息家电技术">家庭自动化，信息家电技术</option><option value="建筑智能升级解决方案">建筑智能升级解决方案</option>')
@@ -154,6 +156,25 @@
             case 2:
                 select2.html('<option value="简洁自然的人机交互">简洁自然的人机交互</option><option value="机器智能和机器学习">机器智能和机器学习</option><option value="机器人生态系统">机器人生态系统</option>')
                 break;
+        }
+    });
+
+    $('form').submit(function (e) {
+        if (!$('input[name="workname"]').val()) {
+            alert('请填写作品名称')
+            e.preventDefault();
+        }
+        else if (!$('textarea[name="workintro"]').val()) {
+            alert('请填写作品简介')
+            e.preventDefault();
+        }
+        else if ($('.a-upload').text() === '格式:Word/PDF，不超过10兆') {
+            alert('请选择文件：格式Word/PDF，不超过10兆')
+            e.preventDefault();
+        }
+        else if ($('input[name="video"]') && !$('input[name="video"]').val()) {
+            alert('请填写视频链接')
+            e.preventDefault();
         }
     })
 </script>

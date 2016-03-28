@@ -53,7 +53,6 @@
 .work_commit .content .input_area{
     width: 100%;
     margin-top:2px;
-    height: 38px;
 }
 .work_commit .content .inf_span{
     display: inline-block;
@@ -64,18 +63,22 @@
     vertical-align: top;
 }
 .work_commit .content .half_input1{
-    margin-left: 10px;
+    margin-left: 5%;
+}
+.select2{
+    margin-top: 2px;
+    margin-left: 25%;
 }
 .work_commit .content .half_input{
     padding-left: 8px;
-    width: 33%;
+    width: 68%;
     height: 38px;
     color:black;
     background-color:#F5F5F5;
     border:none;
 }
 .work_commit .content .inf_input{
-    margin-left: 10px;
+    margin-left: 5%;
     padding-left: 8px;
     width: 66%;
     height: 38px;
@@ -83,11 +86,45 @@
     background-color:#F5F5F5;
     border:none;
 }
+
+.a-upload {
+    margin-left: 5%;
+    padding-left: 8px;
+    width: 66%;
+    line-height: 38px;
+    color: #a3a3a3;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background:#F5F5F5 url("../../img/uploadFileCloud.png")  right no-repeat;
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    background:#eee url("../../img/uploadFileCloud.png")  right no-repeat;
+
+    color: #707070;
+    border-color: #ccc;
+    text-decoration: none
+}
+
 .work_commit .content .text_area{
     height: 120px;
 }
 .work_commit .content .inf_textArea{
-    margin-left: 10px;
+    margin-left: 5%;
     padding-left: 8px;
     width: 66%;
     height: 120px;
@@ -113,4 +150,14 @@
     margin: auto;
     margin-top: 1rem;
 
+}
+.tip{
+    text-align: left;
+    line-height: 1.2rem;
+    color: #a3a3a3;
+    font-size: .8rem;
+    margin: auto;
+    width: 47%;
+    border: none;
+    vertical-align: middle;
 }
