@@ -13,7 +13,7 @@
 .register .selectArea{
     color: #878787;
     font-size: .4em;
-    width: 45%;
+    width: 80%;
     min-width: 250px;
     margin: auto;
     margin-top: 1rem;
@@ -33,7 +33,7 @@
 .register .goLogin{
     font-size: 12px;
     padding-top:2%;
-    width: 45%;
+    width: 80%;
     min-width: 250px;
     height: 30px;
     margin: auto;
@@ -44,7 +44,7 @@
 .register .input_remind{
     color:#878787;
     font-size: 7px;
-    width: 45%;
+    width: 80%;
     min-width: 250px;
     margin: auto;
     text-align: left;
@@ -54,4 +54,14 @@
 }
 .register .selectArea label{
     display: inline-block;
+}
+.register .commonInput{
+    width: 80%;
+    height: 3.5rem;
+}
+.register .commonInput input{
+    height: 2.8rem;
+}
+.register .commonBtnArea{
+    width:80%;
 }

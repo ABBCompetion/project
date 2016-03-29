@@ -268,12 +268,12 @@ a {
 #main .top .textHead{
     width:100%;
     margin: auto;
-    text-align: center;
 }
 #main .textHead a{
     color: #07619F;
     font-size: 1.5rem;
     display: block;
+    width: 6rem;
     margin: auto;
 }
 #main .head img{
@@ -334,7 +334,6 @@ a {
 .red{
     color:red;
 }
-
 #main .pswInput img{
     top: 0.8rem;
     right: .2rem;

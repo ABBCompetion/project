@@ -73,3 +73,20 @@
     text-decoration:underline ;
     padding-left: 20%;
 }
+.login .commonInput{
+    width: 80%;
+    height: 3.5rem;
+}
+.login .commonInput input{
+    height: 2.8rem;
+}
+.login #verifyCode{
+     width: 80%;
+}
+.login #verifyCode input{
+    height: 2.6rem;
+}
+
+.login .commonBtnArea{
+    width: 80%;
+}

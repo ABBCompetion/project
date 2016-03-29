@@ -88,10 +88,10 @@
 <script src='js/placeholderfriend.js'></script>
 <script src="js/checkinput.js"></script>
 <script>
+    var loginFlag=true;
     $(function() {
         $('#verifyCode input').blur(function () {
             var txt = $(this).val();
-            console.log(txt);
             $.ajax({
                 type: 'GET',
                 dataType: 'html',
@@ -100,28 +100,41 @@
                 success: function (data) {
                     if (!data) {
                         alert('验证码错误');
+                        loginFlag=false;
+                        return;
                     }
+                    loginFlag=true;
                 },
                 error: function () {
+                    loginFlag=false;
                     alert('网络错误');
                 }
             });
         });
+
         $('#verifyCode').delegate('img','click',function(){
             var verfy=$(this).parent();
             $(this).remove();
-            verfy.append(' <img src=" http://abbinnovation.careerstart.cn/vcode.asp" align="absmiddle" border="0" width="27%" height="34">');
+            verfy.append('<img src="http://abbinnovation.careerstart.cn/vcode.asp?v"  align="absmiddle" border="0" width="27%" height="34">');
 
         });
     });
     $('#email input').blur(function(){
-        if (!CheckInput.email($('this').val())) {
+        if (!CheckInput.email($(this).val())) {
+            loginFlag=false;
             alert('Email格式不正确');
+            return;
         }
+        loginFlag=true;
     });
     function check(){
         if (!CheckInput.email($('#email input').val())) {
             alert('Email格式不正确');
+            return false;
+        }else if($('input[name="psw"]').val()==''){
+            alert('密码不能为空');
+            return false;
+        }else if(loginFlag){
             return false;
         }
         return true;
