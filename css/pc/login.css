@@ -53,5 +53,28 @@
     cursor: pointer;
 }
 .login .bottom_Area{
+    color:#878787;
+    font-size: .8rem;
+    padding-top:1%;
+    width: 250px;
+    height: 2rem;
+    margin: auto;
+}
+.login .bottom_Area span{
+    display: inline-block;
+    float: left;
+    line-height: 2.0rem;
+}
+.login .bottom_Area .go_register{
+    margin-top:1%;
+    display: inline-block;
+    float: left;
+    color: #3f5f90;
+}
+.bottom_Area .forgetPas{
+    display: inline-block;
+    float: right;
+    text-decoration:underline ;
+    padding-left: 20%;
     display: none;
 }

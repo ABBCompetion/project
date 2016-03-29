@@ -52,7 +52,7 @@
                     <div class="head"><img src="img/registerIcon.png" /><a>用户注册</a></div>
                     <div class="line"><img src="img/line.png"></div>
                 </div>
-                <form method="post" action="http://www.baidu.com">
+                <form method="post" action="login.html" onsubmit="return submitFlag";>
                 <div class="content">
                     <p class="heading">参赛类别<span>(只能选一个)</span></p>
                     <div class="selectArea">
@@ -86,9 +86,10 @@
 <script src='js/placeholderfriend.js'></script>
 <script src="js/checkinput.js"></script>
 <script>
-    $(function() {
+        var submitFlag=false;
         $('#email input').blur(function () {
             if (!CheckInput.email($(this).val())) {
+                submitFlag=false;
                 alert('Email格式不正确');
             }else{
                 $.ajax({
@@ -98,15 +99,19 @@
                     url:'http://abbinnovation.careerstart.cn/checkemail.asp?email='+$(this).val(),
                     success:function(str){
                         if(!str){
+                            submitFlag=false;
                             alert('Email地址已存在，请换另一个');
                         }
                     }
                 })
             }
 
+            submitFlag=true;
         });
+
         $('#phone input').blur(function(){
            if(!CheckInput.mobile($(this).val())){
+               submitFlag=false;
                alert('请输入正确的手机');
            }else{
                $.ajax({
@@ -116,26 +121,31 @@
                    url:'http://abbinnovation.careerstart.cn/checkphone.asp?vPhone='+$(this).val(),
                    success:function(str){
                        if(!str){
+                           submitFlag=false;
                            alert('手机号码已存在，请换另一个');
                        }
                    }
                })
            }
+            submitFlag=true;
         });
         $('#first_pwd input').blur(function(){
             if(!CheckInput.password($(this).val())){
+                submitFlag=false;
                 alert('密码长度必须大于6位');
-            };
+            }
+            submitFlag=true;
         });
         $('#second_pwd input').blur(function(){
            if(!($('#first_pwd input').val()==$(this).val())){
+               submitFlag=false;
                alert('两次输入的密码不一致，请重新输入');
                $('#first_pwd input').val('');
                $(this).val('');
                $(this).focus();
            }
+            submitFlag=true;
         });
-    })
 </script>
 <!--<script src="js/zepto.min.js"></script>-->
 

@@ -1,28 +1,29 @@
 .success .content{
     width: 100%;
     margin: auto;
+    text-align: center;
+    padding-bottom: 5%;
 }
 .success .content .successImg{
-    display: inline;
-    margin-left:12%;
     width: 2.5rem;
+    display: inline-block;
 }
 .success .content .text{
-    min-width: 267px;
-    position:relative;
-    width:50%;
+    position: relative;
+    width: 90%;
     margin: auto;
-    margin-top: -9%;
+    text-align: center;
 }
 .success .text_head{
     margin-top: 3rem;
+    text-align: center;
 }
 .success h2{
-    color:red;
+    color: red;
     padding-bottom: 4%;
-    margin-top: -2.5rem;
-    margin-left:27%;
     font-size: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
 
 }
 .success p{
@@ -30,10 +31,12 @@
     color:#8B8B8B;
     padding-bottom: 2%;
     line-height: 25px;
+    text-align: left;
 }
 .success span{
     color:#1367A3;
     font-size: 14px;
+    text-align: left;
 }
 .success .IDinput{
     width:54%;
@@ -52,7 +55,8 @@
     padding-bottom: 4%;
 }
 .success .time{
-    color:#F18509;
+    color: #F18509;
+    display: inline;
 }
 .success .btnArea{
     width:100%;

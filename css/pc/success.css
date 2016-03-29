@@ -1,13 +1,12 @@
 .success .content{
     width: 100%;
     margin: auto;
+    text-align: center;
+    padding-bottom: 5%;
 }
 .success .content .successImg{
-    position: relative;
     display: inline-block;
-    margin-left: 10%;
-    width: 50px;
-    position: absolute;
+    width: 40px;
     margin-top: -8px;
 
 }
@@ -24,16 +23,17 @@
 }
 .success h2{
     display: inline-block;
-    color:red;
-    margin-left: 32%;
+    color: red;
     padding-bottom: 7%;
+    vertical-align: top;
 
 }
 .success p{
     font-size: 14px;
-    color:#8B8B8B;
+    color: #8B8B8B;
     padding-bottom: 2%;
     line-height: 25px;
+    text-align: left;
 }
 .success span{
     color:#1367A3;

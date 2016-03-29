@@ -53,18 +53,25 @@
                  <div class="head"><img src="img/loginIcom.png" /><a>用户登录</a></div>
                  <div class="line"><img src="img/line.png"></div>
              </div>
-             <form method="POST" action="http://www.baidu.com" >
+             <form method="POST" action="welcome.html"  onSubmit="return check();">
                  <div class="content">
-                     <div id="email" class="commonInput"><input  type="text" name="mail" placeholder="邮箱登录"/></div>
-                     <div class="commonInput pswInput"><input  type="password" name="psw"placeholder="请输入密码"/><img src="img/keyboard.png"/></div>
-                     <div id="verifyCode" class="verCode"><input  type="text" name="verCode" placeholder="验证码"/><img src=" http://abbinnovation.careerstart.cn/vcode.asp" onclick="this.src='vcode.asp'" align="absmiddle" border="0" width="70" height="34"></div>
+                     <div id="email" class="commonInput">
+                         <input  type="text" name="mail" placeholder="邮箱登录"/>
+                     </div>
+                     <div class="commonInput pswInput">
+                         <input  type="password" name="psw"placeholder="请输入密码"/><img src="img/keyboard.png"/>
+                     </div>
+                     <div id="verifyCode" class="verCode">
+                         <input  type="text" name="verCode" placeholder="验证码"/>
+                         <img src=" http://abbinnovation.careerstart.cn/vcode.asp" align="absmiddle" border="0" width="27%" height="34">
+                     </div>
                  </div>
                  <div class="helpArea">
                      <input class="remind" name="remind" type="checkbox"/>记住我
                      <a href="findpwd.html" class="forgetPas">忘记密码</a>
                  </div>
                  <div class="commonBtnArea">
-                     <input  class="commonBtn blue_btn" type="submit" value="登录">
+                     <input  id="loginBtn"class="commonBtn blue_btn" type="submit" value="登录">
                  </div>
                  <div class="bottom_Area">
                      <span>还没有账号?</span><a href="register.html" class="go_register">立即注册</a>
@@ -81,19 +88,16 @@
 <script src='js/placeholderfriend.js'></script>
 <script src="js/checkinput.js"></script>
 <script>
+
     $(function() {
-        $('#email input').blur(function () {
-            if (!CheckInput.email($(this).val())) {
-                alert('Email格式不正确');
-            }
-        });
         $('#verifyCode input').blur(function () {
-            var txt = $(this).attr('value');
+            var txt = $(this).val();
+            console.log(txt);
             $.ajax({
                 type: 'GET',
                 dataType: 'string',
                 async: false,
-                url: "http://abbinnovation.careerstart.cn/checkvcode.asp?vcode=" + txt,
+                url: "http://abbinnovation.careerstart.cn/checkvcode.asp?vcode="+ txt,
                 success: function (str) {
                     if (!str) {
                         alert('验证码错误');
@@ -101,7 +105,20 @@
                 }
             });
         });
+        $('#verifyCode').delegate('img','click',function(){
+            var verfy=$(this).parent();
+            $(this).remove();
+            verfy.append(' <img src=" http://abbinnovation.careerstart.cn/vcode.asp" align="absmiddle" border="0" width="27%" height="34">');
+
+        });
     });
+    function check(){
+        if (!CheckInput.email($('#email input').val())) {
+            alert('Email格式不正确');
+            return false;
+        }
+        return true;
+    }
 </script>
 <!--<script src="js/zepto.min.js"></script>-->
 
