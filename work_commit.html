@@ -174,7 +174,7 @@
             alert('请选择文件：格式Word/PDF，不超过10兆')
             e.preventDefault();
         }
-        else if ($('input[name="video"]') && !$('input[name="video"]').val()) {
+        else if ($('input[name="video"]').length>0 && !$('input[name="video"]').val()) {
             alert('请填写视频链接')
             e.preventDefault();
         }

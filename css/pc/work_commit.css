@@ -1,3 +1,7 @@
+#main {
+    width: 80%;
+}
+
 .work_commit{
     min-width: 500px;
     padding-bottom: 5%;
@@ -46,7 +50,7 @@
     font-size: 16px;
 }
 .work_commit .content .input_area{
-    width: 500px;
+    width: 600px;
     margin-top:2px;
     margin-left:4% ;
     height: 38px;
@@ -74,7 +78,7 @@
 .work_commit .content .inf_input{
     margin-left: 10px;
     padding-left: 8px;
-    width: 350px;
+    width: 400px;
     height: 38px;
     color:black;
     background-color:#F5F5F5;
@@ -84,7 +88,7 @@
 .a-upload {
     margin-left: 10px;
     padding-left: 8px;
-    width: 350px;
+    width: 400px;
     line-height: 38px;
     color: #a3a3a3;
     position: relative;
@@ -96,7 +100,7 @@
     background:#F5F5F5 url("../../img/uploadFileCloud.png")  right no-repeat;
 }
 #tiaozan{
-    width: 358px;
+    width: 409px;
 }
 .a-upload  input {
     position: absolute;
@@ -123,7 +127,7 @@
 .work_commit .content .inf_textArea{
     margin-left: 10px;
     padding-left: 8px;
-    width: 350px;
+    width: 400px;
     height: 120px;
     color:black;
     background-color:#F5F5F5;
@@ -153,7 +157,7 @@
     color: #a3a3a3;
     font-size: 12px;
     margin-left: 168px;
-    width: 350px;
+    width: 400px;
     border: none;
     vertical-align: middle;
 }
