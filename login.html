@@ -94,13 +94,16 @@
             console.log(txt);
             $.ajax({
                 type: 'GET',
-                dataType: 'string',
+                dataType: 'html',
                 async: false,
                 url: "http://abbinnovation.careerstart.cn/checkvcode.asp?vcode="+ txt,
-                success: function (str) {
-                    if (!str) {
+                success: function (data) {
+                    if (!data) {
                         alert('验证码错误');
                     }
+                },
+                error: function () {
+                    alert('网络错误');
                 }
             });
         });
@@ -110,6 +113,11 @@
             verfy.append(' <img src=" http://abbinnovation.careerstart.cn/vcode.asp" align="absmiddle" border="0" width="27%" height="34">');
 
         });
+    });
+    $('#email input').blur(function(){
+        if (!CheckInput.email($('this').val())) {
+            alert('Email格式不正确');
+        }
     });
     function check(){
         if (!CheckInput.email($('#email input').val())) {

@@ -56,7 +56,7 @@
                 <div class="content">
                     <p class="heading">参赛类别<span>(只能选一个)</span></p>
                     <div class="selectArea">
-                        <label><input class="choice" name="remind" type="radio" value="1"/>
+                        <label><input class="choice" name="remind"checked="checked" type="radio" value="1"/>
                          2016ABB大学生创新大赛 </label>
                         <label><input class="choice" name="remind" type="radio" value="2"/>
                          2016ABB机器人创新挑战赛  </label>
@@ -86,26 +86,30 @@
 <script src='js/placeholderfriend.js'></script>
 <script src="js/checkinput.js"></script>
 <script>
-        var submitFlag=false;
+    var submitFlag=false;
         $('#email input').blur(function () {
             if (!CheckInput.email($(this).val())) {
                 submitFlag=false;
                 alert('Email格式不正确');
+                return;
             }else{
                 $.ajax({
                     type:'GET',
-                    dataType:'string',
+                    dataType:'html',
                     async:false,
                     url:'http://abbinnovation.careerstart.cn/checkemail.asp?email='+$(this).val(),
-                    success:function(str){
-                        if(!str){
+                    success:function(data){
+                        if(!data){
                             submitFlag=false;
                             alert('Email地址已存在，请换另一个');
+                            return;
                         }
+                    } ,error: function () {
+                        alert('网络错误');
+                        return;
                     }
                 })
             }
-
             submitFlag=true;
         });
 
@@ -113,29 +117,37 @@
            if(!CheckInput.mobile($(this).val())){
                submitFlag=false;
                alert('请输入正确的手机');
+               return;
            }else{
                $.ajax({
                    type:'GET',
-                   dataType:'string',
+                   dataType:'html',
                    async:false,
                    url:'http://abbinnovation.careerstart.cn/checkphone.asp?vPhone='+$(this).val(),
-                   success:function(str){
-                       if(!str){
+                   success:function(data){
+                       if(!data){
                            submitFlag=false;
                            alert('手机号码已存在，请换另一个');
+                           return;
                        }
+                   }, error: function () {
+                       alert('网络错误');
+                       return;
                    }
                })
            }
             submitFlag=true;
         });
+
         $('#first_pwd input').blur(function(){
             if(!CheckInput.password($(this).val())){
                 submitFlag=false;
                 alert('密码长度必须大于6位');
+                return;
             }
             submitFlag=true;
         });
+
         $('#second_pwd input').blur(function(){
            if(!($('#first_pwd input').val()==$(this).val())){
                submitFlag=false;
@@ -143,6 +155,7 @@
                $('#first_pwd input').val('');
                $(this).val('');
                $(this).focus();
+               return;
            }
             submitFlag=true;
         });
