@@ -48,7 +48,7 @@
     margin-left: 13px;
 }
 .infFill .content .input_area .input_value{
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 5px;
 }
 
@@ -56,7 +56,7 @@
     display: inline-block;
     margin: auto;
     width:130px;
-    font-size: 13px;
+    font-size: 14px;
     text-align: right;
 }
 .infFill .content .inf_input{
@@ -157,7 +157,7 @@
     margin-left:10px ;
 }
 .infInnovation .content .inf_span,.infInnovation .content .topic_text{
-    width:205px;
+    width:220px
 }
 
 label{

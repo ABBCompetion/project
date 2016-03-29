@@ -35,20 +35,20 @@
 }
 .infFill .content .input_area .radio_style{
     margin-top: 10px;
-    font-size: .8rem;;
+    font-size: .9rem;;
 }
 .infFill .content .input_area .fir_radio_style{
-    margin-left: .8rem;;
+    margin-left: .9rem;;
 }
 .infFill .content .input_area .input_value{
-    font-size: .8rem;;
+    font-size: .9rem;;
     margin-left: 5px;
 }
 .infFill .content .inf_span{
     display: inline-block;
     margin: auto;
     width: 22%;
-    font-size: .8rem;;
+    font-size: .9rem;
     text-align: left;
 }
 .infFill .content .inf_input{
