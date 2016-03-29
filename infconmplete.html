@@ -18,13 +18,10 @@
     <link media="screen and (min-width:641px)" rel="stylesheet" href="css/pc/base.css"/>
     <link media="screen and (min-width:641px)" rel="stylesheet" href="css/pc/infFill.css"/>
     <!--<![endif]-->
-
     <!--[if IE]>
     <link rel="stylesheet" href="css/pc/base.css"/>
     <link rel="stylesheet" href="css/pc/infFill.css"/>
-
     <![endif]-->
-
 </head>
 <body>
 <div id="wrap">
@@ -59,33 +56,34 @@
                             <p class="heading">选择参赛形式</p>
 
                             <div class="selectArea">
+                                <label>
                                 <input class="choice" name="remind" type="radio" value="1" checked="checked"/>
 
-                                <p>个人形式参赛</p>
+                                <p>个人形式参赛</p></label><label>
                                 <input class="choice" name="remind" type="radio" value="2"/>
 
-                                <p>团体形式参赛(限2-3人)</p>
+                                <p>团体形式参赛(限2-3人)</p></label>
                             </div>
-                            <div class="input_area">
+                            <div class="input_area nameArea">
                                 <span class="inf_span"><span class="red">*</span>中文姓名</span>
                                 <input class="inf_input" type="text" name="name" placeholder="请填写真实姓名，提交后不可更改">
                             </div>
-                            <div class="input_area">
+                            <div class="input_area sexArea">
                                 <span class="inf_span"><span class="red">*</span>性别</span>
-                                <input class="fir_radio_style" name="sex" value="man" type="radio"><span
-                                    class="input_value">男</span>
-                                <input class="radio_style" name="sex" value="woman" type="radio"><span
-                                    class="input_value">女</span>
+                                <label><input class="fir_radio_style" name="sex" value="man" type="radio"><span
+                                    class="input_value">男</span></label>
+                                <label><input class="radio_style" name="sex" value="woman" type="radio"><span
+                                    class="input_value">女</span></label>
                             </div>
-                            <div class="input_area">
+                            <div class="input_area phoneArea">
                                 <span class="inf_span"><span class="red">*</span>手机号码</span>
                                 <input class="inf_input" name="phone" type="text" placeholder="请填写有效的手机号码，提交后不可更改">
                             </div>
-                            <div class="input_area">
+                            <div class="input_area mailArea">
                                 <span class="inf_span">邮箱</span>
                                 <input class="inf_input" name="mail" type="text">
                             </div>
-                            <div class="input_area">
+                            <div class="input_area schoolArea">
                                 <span class="inf_span"><span class="red">*</span>学校</span>
                                 <select id="sheng12" name="sheng12"
                                         onchange="javascript:showSchool(this.value,'school1');">
@@ -126,16 +124,13 @@
                                     <option value="930000">台湾</option>
                                     <option value="990000">其他</option>
                                 </select><select id="school1" name="school1" >
-                                <option></option>
-                                <option>请先选择城市</option>
+                                <option value=""></option>
+                                <option value="">请先选择城市</option>
                             </select>
-
-                                <input type="text" name="otherSchool1" id="otherSchool1" maxlength="50" class="txtinput"
-                                       value="" style="display:none; margin-left:6px">
                             </div>
-                            <div class="input_area">
+                            <div class="input_area majorArea">
                                 <span class="inf_span"><span class="red">*</span>专业类别</span>
-                                <select class="inf_input">
+                                <select class="inf_input" name="major">
                                     <option value="">请选择</option>
                                     <option value="100">计算机科学与技术</option>
                                     <option value="110">电子科学与技术</option>
@@ -184,20 +179,20 @@
                                     <option value="90000">其他</option>
                                 </select>
                             </div>
-                            <div class="input_area">
+                            <div class="input_area majorNameArea">
                                 <span class="inf_span"><span class="red">*</span>专业名称</span>
-                                <input class="inf_input" type="text" placeholder="手动填写">
+                                <input class="inf_input" type="text" name="major_name" placeholder="手动填写">
                             </div>
-                            <div class="input_area">
+                            <div class="input_area eduArea">
                                 <span class="inf_span"><span class="red">*</span>学历</span>
-                                <input class="fir_radio_style" type="radio" value=""><span
+                              <label>  <input class="fir_radio_style" type="radio" name="edu" value="本科生"><span
                                     class="input_value">本科生</span>
-                                <input class="radio_style" type="radio" value=""><span class="input_value">硕士生</span>
-                                <input class="radio_style" type="radio" value=""><span class="input_value">博士生</span>
+                              </label><label><input class="radio_style" type="radio" name="edu" value="硕士生"><span class="input_value">硕士生</span>
+                                </label><label> <input class="radio_style" type="radio" name="edu" value="博士生"><span class="input_value">博士生</span></label>
                             </div>
-                            <div class="input_area">
+                            <div class="input_area graduateArea">
                                 <span class="inf_span"><span class="red">*</span>毕业时间</span>
-                                <select class="inf_input time_input">
+                                <select name="graduate_year" class="inf_input time_input">
                                     <option value="2015">2015</option>
                                     <option value="2016">2016</option>
                                     <option value="2017">2017</option>
@@ -206,7 +201,7 @@
                                     <option value="2020">2020</option>
                                 </select>
                                 <span>年</span>
-                                <select class="inf_input time_input">
+                                <select name="graduate_month" class="inf_input time_input">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -231,13 +226,15 @@
                                 <span class="inf_span topic_text"><span class="red">*</span>你感兴趣的课题</span>
 
                                 <div class="choose_topic">
+                                    <label>
                                     <input class="input_icon" type="radio" name="interest" value="智慧能源"><span
-                                        class="input_value">智慧能源</span><br/>
-                                    <input class="input_icon" type="radio" name="interest" value="智能建筑"><span
-                                        class="input_value">智能建筑</span><br/>
-                                    <input class="input_icon" type="radio" name="interest" value="智能机器人技术"><span
+                                        class="input_value">智慧能源</span></label><br/>
+                                    <label><input class="input_icon" type="radio" name="interest" value="智能建筑"><span
+                                        class="input_value">智能建筑</span></label><br/>
+                                    <label><input class="input_icon" type="radio" name="interest" value="智能机器人技术"><span
                                         class="input_value">智能机器人技术
-                                <span class="choose_topic_third"></span></span>
+                                <span class="choose_topic_third"></span>
+                                    </span></label>
                                 </div>
                             </div>
                             <div class="input_area getInf_area">
@@ -245,22 +242,22 @@
 
                                 <div class="choose_topic">
                                     <ul>
-                                        <li><label class="top_a_label"><input type="checkbox"/><a
+                                        <li><label class="top_a_label"><input type="checkbox" name="getInforFrom"/><a
                                                 class="second_a top_a a_style2">ABB官方微信/招聘官方微信</a></label>
                                         </li>
-                                        <li><label class="left_label"><input type="checkbox"/><a
+                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom"/><a
                                                 class="first_a a_style2">校园BBS</a></label><label
-                                                class="right_label"><input type="checkbox"/><a
+                                                class="right_label"><input type="checkbox" name="getInforFrom"/><a
                                                 class="second_a a_style2 ">院系老师/院系网站</a></label>
                                         </li>
-                                        <li><label class="left_label"><input type="checkbox"/><a
+                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom"/><a
                                                 class="first_a a_style2 ">海报</a></label><label
-                                                class="right_label"><input type="checkbox"/><a
+                                                class="right_label"><input type="checkbox" name="getInforFrom"/><a
                                                 class="second_a a_style2">应届生网站</a></label>
                                         </li>
-                                        <li><label class="left_label"><input type="checkbox"/><a
+                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom"/><a
                                                 class="first_a a_style2">大赛官方QQ平台</a></label><label class="right_label"><input
-                                                type="checkbox"/><a class="second_a a_style2 ">其他微信公众账号</a></label>
+                                                type="checkbox" name="getInforFrom"/><a class="second_a a_style2 ">其他微信公众账号</a></label>
                                         </li>
                                     </ul>
                                 </div>
@@ -286,7 +283,7 @@
 <script>
 
     bindPhoneNumCheck();
-
+    var infConmplete_innovate_personal=true;
 
     $('input[type="checkbox"]').change(function () {
         $('input[type="checkbox"]').not(':checked').each(function () {
@@ -298,13 +295,13 @@
         });
     });
 
-    $('.selectArea>input').change(function () {
-        console.log($(this).val())
+    $('.selectArea>label>input').change(function () {
         if ($(this).val() === '2') {
-            $('#appendArea').html('<div style="margin-top: 50px;" class="input_area"><span class="inf_span"><span class="red">*</span>中文姓名</span><input class="inf_input" type="text" name="name" placeholder="请填写真实姓名，提交后不可更改"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>性别</span><input class="fir_radio_style" name="sex" value="man" type="radio"><span class="input_value">男</span><input class="radio_style" name="sex" value="woman" type="radio"><span class="input_value">女</span></div><div class="input_area"><span class="inf_span"><span class="red">*</span>手机号码</span><input class="inf_input" name="phone" type="text" placeholder="请填写有效的手机号码，提交后不可更改"></div><div class="input_area"><span class="inf_span">邮箱</span><input class="inf_input" name="mail" type="text"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>学校</span><select id="sheng12" name="sheng12"  onchange="javascript:showSchool(this.value,\'school'+2+'\');"><option value="">请选择城市</option><option value="110100">北京</option><option value="120100">天津</option><option value="130000">河北</option><option value="140000">山西</option><option value="150000">内蒙古</option><option value="210000">辽宁</option><option value="220000">吉林</option><option value="230000">黑龙江</option><option value="310100">上海</option><option value="320000">江苏</option><option value="330000">浙江</option><option value="340000">安徽</option><option value="350000">福建</option><option value="360000">江西</option><option value="370000">山东</option><option value="410000">河南</option><option value="420000">湖北</option><option value="430000">湖南</option><option value="440000">广东</option><option value="450000">广西</option><option value="460000">海南</option><option value="500100">重庆</option><option value="510000">四川</option><option value="520000">贵州</option><option value="530000">云南</option><option value="540000">西藏</option><option value="610000">陕西</option><option value="620000">甘肃</option><option value="630000">青海</option><option value="640000">宁夏</option><option value="650000">新疆</option><option value="910000">香港</option><option value="920000">澳门</option><option value="930000">台湾</option><option value="990000">其他</option></select><select class="schools" id="school2" name="school2""><option></option><option>请先选择城市</option></select><input type="text" name="otherSchool1" id="otherSchool1" maxlength="50" class="txtinput"                                       value="" style="display:none; margin-left:6px"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>专业类别</span><select class="inf_input"><option value="">请选择</option><option value="100">计算机科学与技术</option><option value="110">电子科学与技术</option><option value="120">信息与通信工程</option><option value="130">电子信息工程类</option><option value="140">软件工程类</option><option value="150">机械工程/车辆工程</option><option value="160">电力系统及其自动化</option><option value="170">航空航天类</option><option value="180">生物工程类</option><option value="190">材料科学与工程</option><option value="200">环境科学类</option><option value="210">交通物流类</option><option value="220">工商管理类</option><option value="230">经济学类</option><option value="240">财会类</option><option value="250">统计学类</option><option value="260">物理学类</option><option value="270">化学类</option><option value="280">数学类</option><option value="290">艺术类</option><option value="300">心理学类</option><option value="310">法学类</option><option value="320">外国语言文学类</option><option value="330">管理学</option><option value="340">公共管理类</option><option value="350">土建类</option><option value="360">食品科学与工程</option><option value="370">基础医学类</option><option value="380">药学类</option><option value="400">电气工程及其自动化</option><option value="410">轮机</option><option value="420">安全工程</option><option value="430">热能与动力工程</option><option value="500">力学/工程力学</option><option value="510">控制科学与工程</option><option value="520">工业工程与管理</option><option value="530">动力工程及工程热物理</option><option value="540">电力电子与电力传动</option><option value="550">机械制造及其自动化</option><option value="560">市场营销</option><option value="570">物流管理</option><option value="580">高压绝缘技术</option><option value="590">电机与电器</option><option value="600">自动化</option><option value="90000">其他</option></select></div><div class="input_area"><span class="inf_span"><span class="red">*</span>专业名称</span><input class="inf_input" type="text" placeholder="手动填写"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>学历</span><input class="fir_radio_style" type="radio" value=""><span                                    class="input_value">本科生</span><input class="radio_style" type="radio" value=""><span class="input_value">硕士生</span><input class="radio_style" type="radio" value=""><span class="input_value">博士生</span></div><div class="input_area"><span class="inf_span"><span class="red">*</span>毕业时间</span><select class="inf_input time_input"><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option></select><span>年</span><select class="inf_input time_input"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><span>月</span></div>  <div class="add_member_btn innovate_add_member"><img src="img/add_member_btn.png"></div>');
+            infConmplete_innovate_personal=false;
+            $('#appendArea').html('<div style="margin-top: 50px;" class="input_area nameArea"><span class="inf_span"><span class="red">*</span>第二成员中文姓名</span><input class="inf_input" type="text" name="name2" placeholder="请填写真实姓名，提交后不可更改"></div><div class="input_area sexArea"><span class="inf_span"><span class="red">*</span>性别</span><label><input class="fir_radio_style" name="sex2" value="man" type="radio"><span class="input_value">男</span></label><label><input class="radio_style" name="sex2" value="woman" type="radio"><span class="input_value">女</span></label></div><div class="input_area phoneArea"><span class="inf_span"><span class="red">*</span>手机号码</span><input class="inf_input" name="phone2" type="text" placeholder="请填写有效的手机号码，提交后不可更改"></div><div class="input_area mailArea"><span class="inf_span">邮箱</span><input class="inf_input" name="mail2" type="text"></div><div class="input_area schoolArea"><span class="inf_span"><span class="red">*</span>学校</span><select id="sheng12" name="sheng122"  onchange="javascript:showSchool(this.value,\'school'+2+'\');"><option value="">请选择城市</option><option value="110100">北京</option><option value="120100">天津</option><option value="130000">河北</option><option value="140000">山西</option><option value="150000">内蒙古</option><option value="210000">辽宁</option><option value="220000">吉林</option><option value="230000">黑龙江</option><option value="310100">上海</option><option value="320000">江苏</option><option value="330000">浙江</option><option value="340000">安徽</option><option value="350000">福建</option><option value="360000">江西</option><option value="370000">山东</option><option value="410000">河南</option><option value="420000">湖北</option><option value="430000">湖南</option><option value="440000">广东</option><option value="450000">广西</option><option value="460000">海南</option><option value="500100">重庆</option><option value="510000">四川</option><option value="520000">贵州</option><option value="530000">云南</option><option value="540000">西藏</option><option value="610000">陕西</option><option value="620000">甘肃</option><option value="630000">青海</option><option value="640000">宁夏</option><option value="650000">新疆</option><option value="910000">香港</option><option value="920000">澳门</option><option value="930000">台湾</option><option value="990000">其他</option></select><select class="schools" id="school2" name="school22""><option value=""></option><option value="">请先选择城市</option></select></div> <div class="input_area majorArea"><span class="inf_span"><span class="red">*</span>专业类别</span><select class="inf_input"><option value="">请选择</option><option value="100">计算机科学与技术</option><option value="110">电子科学与技术</option><option value="120">信息与通信工程</option><option value="130">电子信息工程类</option><option value="140">软件工程类</option><option value="150">机械工程/车辆工程</option><option value="160">电力系统及其自动化</option><option value="170">航空航天类</option><option value="180">生物工程类</option><option value="190">材料科学与工程</option><option value="200">环境科学类</option><option value="210">交通物流类</option><option value="220">工商管理类</option><option value="230">经济学类</option><option value="240">财会类</option><option value="250">统计学类</option><option value="260">物理学类</option><option value="270">化学类</option><option value="280">数学类</option><option value="290">艺术类</option><option value="300">心理学类</option><option value="310">法学类</option><option value="320">外国语言文学类</option><option value="330">管理学</option><option value="340">公共管理类</option><option value="350">土建类</option><option value="360">食品科学与工程</option><option value="370">基础医学类</option><option value="380">药学类</option><option value="400">电气工程及其自动化</option><option value="410">轮机</option><option value="420">安全工程</option><option value="430">热能与动力工程</option><option value="500">力学/工程力学</option><option value="510">控制科学与工程</option><option value="520">工业工程与管理</option><option value="530">动力工程及工程热物理</option><option value="540">电力电子与电力传动</option><option value="550">机械制造及其自动化</option><option value="560">市场营销</option><option value="570">物流管理</option><option value="580">高压绝缘技术</option><option value="590">电机与电器</option><option value="600">自动化</option><option value="90000">其他</option></select></div><div class="input_area majorNameArea"><span class="inf_span"><span class="red">*</span>专业名称</span><input class="inf_input" type="text" placeholder="手动填写"></div><div class="input_area eduArea"><span class="inf_span"><span class="red">*</span>学历</span><label><input class="fir_radio_style" name="edu2" type="radio" value="本科生"><span class="input_value">本科生</span></label><label><input class="radio_style" name="edu2" type="radio" value="硕士生"><span class="input_value">硕士生</span><label><label><input class="radio_style" type="radio" name="edu2" value="博士生"><span class="input_value">博士生</span></label></div><div class="input_area graduateArea"><span class="inf_span"><span class="red">*</span>毕业时间</span><select class="inf_input time_input"><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option></select><span>年</span><select class="inf_input time_input"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><span>月</span></div>  <div class="add_member_btn innovate_add_member"><img src="img/add_member_btn.png"></div>');
             $('.innovate_add_member').click(function () {
 
-                $(this).after($('<div style="margin-top: 50px;" class="input_area"><span class="inf_span"><span class="red">*</span>中文姓名</span><input class="inf_input" type="text" name="name" placeholder="请填写真实姓名，提交后不可更改"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>性别</span><input class="fir_radio_style" name="sex" value="man" type="radio"><span class="input_value">男</span><input class="radio_style" name="sex" value="woman" type="radio"><span class="input_value">女</span></div><div class="input_area"><span class="inf_span"><span class="red">*</span>手机号码</span><input class="inf_input" name="phone" type="text" placeholder="请填写有效的手机号码，提交后不可更改"></div><div class="input_area"><span class="inf_span">邮箱</span><input class="inf_input" name="mail" type="text"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>学校</span><select id="sheng12" name="sheng12"  onchange="javascript:showSchool(this.value,\'school'+3+'\');"><option value="">请选择城市</option><option value="110100">北京</option><option value="120100">天津</option><option value="130000">河北</option><option value="140000">山西</option><option value="150000">内蒙古</option><option value="210000">辽宁</option><option value="220000">吉林</option><option value="230000">黑龙江</option><option value="310100">上海</option><option value="320000">江苏</option><option value="330000">浙江</option><option value="340000">安徽</option><option value="350000">福建</option><option value="360000">江西</option><option value="370000">山东</option><option value="410000">河南</option><option value="420000">湖北</option><option value="430000">湖南</option><option value="440000">广东</option><option value="450000">广西</option><option value="460000">海南</option><option value="500100">重庆</option><option value="510000">四川</option><option value="520000">贵州</option><option value="530000">云南</option><option value="540000">西藏</option><option value="610000">陕西</option><option value="620000">甘肃</option><option value="630000">青海</option><option value="640000">宁夏</option><option value="650000">新疆</option><option value="910000">香港</option><option value="920000">澳门</option><option value="930000">台湾</option><option value="990000">其他</option></select><select class="schools" id="school3" name="school3" "><option></option><option>请先选择城市</option></select><input type="text" name="otherSchool1" id="otherSchool1" maxlength="50" class="txtinput"                                       value="" style="display:none; margin-left:6px"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>专业类别</span><select class="inf_input"><option value="">请选择</option><option value="100">计算机科学与技术</option><option value="110">电子科学与技术</option><option value="120">信息与通信工程</option><option value="130">电子信息工程类</option><option value="140">软件工程类</option><option value="150">机械工程/车辆工程</option><option value="160">电力系统及其自动化</option><option value="170">航空航天类</option><option value="180">生物工程类</option><option value="190">材料科学与工程</option><option value="200">环境科学类</option><option value="210">交通物流类</option><option value="220">工商管理类</option><option value="230">经济学类</option><option value="240">财会类</option><option value="250">统计学类</option><option value="260">物理学类</option><option value="270">化学类</option><option value="280">数学类</option><option value="290">艺术类</option><option value="300">心理学类</option><option value="310">法学类</option><option value="320">外国语言文学类</option><option value="330">管理学</option><option value="340">公共管理类</option><option value="350">土建类</option><option value="360">食品科学与工程</option><option value="370">基础医学类</option><option value="380">药学类</option><option value="400">电气工程及其自动化</option><option value="410">轮机</option><option value="420">安全工程</option><option value="430">热能与动力工程</option><option value="500">力学/工程力学</option><option value="510">控制科学与工程</option><option value="520">工业工程与管理</option><option value="530">动力工程及工程热物理</option><option value="540">电力电子与电力传动</option><option value="550">机械制造及其自动化</option><option value="560">市场营销</option><option value="570">物流管理</option><option value="580">高压绝缘技术</option><option value="590">电机与电器</option><option value="600">自动化</option><option value="90000">其他</option></select></div><div class="input_area"><span class="inf_span"><span class="red">*</span>专业名称</span><input class="inf_input" type="text" placeholder="手动填写"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>学历</span><input class="fir_radio_style" type="radio" value=""><span                                    class="input_value">本科生</span><input class="radio_style" type="radio" value=""><span class="input_value">硕士生</span><input class="radio_style" type="radio" value=""><span class="input_value">博士生</span></div><div class="input_area"><span class="inf_span"><span class="red">*</span>毕业时间</span><select class="inf_input time_input"><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option></select><span>年</span><select class="inf_input time_input"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><span>月</span></div>'));
+                $(this).after($('<div style="margin-top: 50px;" class="input_area nameArea"><span class="inf_span"><span class="red">*</span>第三成员中文姓名</span><input class="inf_input" type="text" name="name3" placeholder="请填写真实姓名，提交后不可更改"></div><div class="input_area sexArea"><span class="inf_span"><span class="red">*</span>性别</span><label><input class="fir_radio_style" name="sex3" value="man" type="radio"><span class="input_value">男</span></label><label><input class="radio_style" name="sex3" value="woman" type="radio"><span class="input_value">女</span></label></div><div class="input_area phoneArea"><span class="inf_span"><span class="red">*</span>手机号码</span><input class="inf_input" name="phone3" type="text" placeholder="请填写有效的手机号码，提交后不可更改"></div><div class="input_area mailArea"><span class="inf_span">邮箱</span><input class="inf_input" name="mail3" type="text"></div><div class="input_area schoolArea"><span class="inf_span"><span class="red">*</span>学校</span><select id="sheng12" name="sheng123"  onchange="javascript:showSchool(this.value,\'school'+3+'\');"><option value="">请选择城市</option><option value="110100">北京</option><option value="120100">天津</option><option value="130000">河北</option><option value="140000">山西</option><option value="150000">内蒙古</option><option value="210000">辽宁</option><option value="220000">吉林</option><option value="230000">黑龙江</option><option value="310100">上海</option><option value="320000">江苏</option><option value="330000">浙江</option><option value="340000">安徽</option><option value="350000">福建</option><option value="360000">江西</option><option value="370000">山东</option><option value="410000">河南</option><option value="420000">湖北</option><option value="430000">湖南</option><option value="440000">广东</option><option value="450000">广西</option><option value="460000">海南</option><option value="500100">重庆</option><option value="510000">四川</option><option value="520000">贵州</option><option value="530000">云南</option><option value="540000">西藏</option><option value="610000">陕西</option><option value="620000">甘肃</option><option value="630000">青海</option><option value="640000">宁夏</option><option value="650000">新疆</option><option value="910000">香港</option><option value="920000">澳门</option><option value="930000">台湾</option><option value="990000">其他</option></select><select class="schools" id="school3" name="school33" "><option value=""></option><option value="">请先选择城市</option></select></div> <div class="input_area majorArea"><span class="inf_span"><span class="red">*</span>专业类别</span><select class="inf_input"><option value="">请选择</option><option value="100">计算机科学与技术</option><option value="110">电子科学与技术</option><option value="120">信息与通信工程</option><option value="130">电子信息工程类</option><option value="140">软件工程类</option><option value="150">机械工程/车辆工程</option><option value="160">电力系统及其自动化</option><option value="170">航空航天类</option><option value="180">生物工程类</option><option value="190">材料科学与工程</option><option value="200">环境科学类</option><option value="210">交通物流类</option><option value="220">工商管理类</option><option value="230">经济学类</option><option value="240">财会类</option><option value="250">统计学类</option><option value="260">物理学类</option><option value="270">化学类</option><option value="280">数学类</option><option value="290">艺术类</option><option value="300">心理学类</option><option value="310">法学类</option><option value="320">外国语言文学类</option><option value="330">管理学</option><option value="340">公共管理类</option><option value="350">土建类</option><option value="360">食品科学与工程</option><option value="370">基础医学类</option><option value="380">药学类</option><option value="400">电气工程及其自动化</option><option value="410">轮机</option><option value="420">安全工程</option><option value="430">热能与动力工程</option><option value="500">力学/工程力学</option><option value="510">控制科学与工程</option><option value="520">工业工程与管理</option><option value="530">动力工程及工程热物理</option><option value="540">电力电子与电力传动</option><option value="550">机械制造及其自动化</option><option value="560">市场营销</option><option value="570">物流管理</option><option value="580">高压绝缘技术</option><option value="590">电机与电器</option><option value="600">自动化</option><option value="90000">其他</option></select></div><div class="input_area  majorNameArea"><span class="inf_span"><span class="red">*</span>专业名称</span><input class="inf_input" type="text" placeholder="手动填写"></div><div class="input_area eduArea"><span class="inf_span"><span class="red">*</span>学历</span><label><input class="fir_radio_style" name="edu3" type="radio" value="本科生"><span class="input_value">本科生</span></label><label><input class="radio_style"  name="edu3" type="radio" value="硕士生"><span class="input_value">硕士生</span></label><label><input class="radio_style" type="radio" name="edu3" value="博士生"><span class="input_value">博士生</span></label></div><div class="input_area graduateArea"><span class="inf_span"><span class="red">*</span>毕业时间</span><select class="inf_input time_input"><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option></select><span>年</span><select class="inf_input time_input"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><span>月</span></div>'));
                 $(this).hide();
 
             });
@@ -312,6 +309,8 @@
             bindPhoneNumCheck();
         }
         else {
+            infConmplete_innovate_personal=true;
+
             $('#appendArea').html('');
         }
     });
@@ -343,6 +342,8 @@
 
     //校验手机号
     function bindPhoneNumCheck(){
+
+
         $('input[name="phone"]').each(function () {
             $(this).unbind('blur');
             $(this).bind('blur', function () {
@@ -375,31 +376,90 @@
 
     $('form').submit(function (e) {
         var continue_=true;
-
-        $('input[name="phone"]').each(function () {
-            if (!CheckInput.mobile($(this).val())) {
-                alert('手机号格式不正确');
+        var str='请输入第'
+        if(infConmplete_innovate_personal){
+            str='请输入';
+        }
+        $('.nameArea').each(function (i) {
+            if (!$('input',$(this)).val()) {
+                alert(str+ (infConmplete_innovate_personal?'':(++i) )   +'成员姓名');
                 continue_=false;
+                e.preventDefault();
                 return false;
             }
         });
 
-        if (!$('input[name="workname"]').val()) {
-            alert('请填写作品名称')
-            e.preventDefault();
+        if(!continue_){
+            return;
         }
-        else if (!$('textarea[name="workintro"]').val()) {
-            alert('请填写作品简介')
-            e.preventDefault();
+        $('.sexArea').each(function (i) {
+            if ($('input:checked',$(this)).length<1) {
+                alert(str+ (infConmplete_innovate_personal?'':(++i) ) +'成员性别');
+                continue_=false;
+                e.preventDefault();
+                return false;
+            }
+        });
+        if(!continue_){
+            return;
         }
-        else if ($('.a-upload').text() === '格式:Word/PDF，不超过10兆') {
-            alert('请选择文件：格式Word/PDF，不超过10兆')
-            e.preventDefault();
+        $('.phoneArea').each(function (i) {
+            if (!CheckInput.mobile($('input',this).val())) {
+                alert((infConmplete_innovate_personal?'':(++i) )   +'成员手机号不正确');
+                continue_=false;
+                e.preventDefault();
+                return false;
+            }
+        });
+        if(!continue_){
+            return;
         }
-        else if ($('input[name="video"]') && !$('input[name="video"]').val()) {
-            alert('请填写视频链接')
-            e.preventDefault();
+        $('.schoolArea').each(function (i) {
+            console.log($('select:eq(1) option:checked',$(this)).val());
+
+            if ($('select:eq(1) option:checked',$(this)).val()==='') {
+                alert(str+ (infConmplete_innovate_personal?'':(++i) )   +'成员学校');
+                continue_=false;
+                e.preventDefault();
+                return false;
+            }
+        });
+        if(!continue_){
+            return;
         }
+        $('.majorArea').each(function (i) {
+            if ($('option:checked',$(this)).attr('value')==='') {
+                alert(str+ (infConmplete_innovate_personal?'':(++i) )   +'成员专业类别');
+                continue_=false;
+                e.preventDefault();
+                return false;
+            }
+        });
+        if(!continue_){
+            return;
+        }
+
+        $('.majorNameArea').each(function (i) {
+            if (!$('input',$(this)).val()) {
+                alert((infConmplete_innovate_personal?'':(++i) )   +'成员专业名称');
+                continue_=false;
+                e.preventDefault();
+                return false;
+            }
+        });
+        if(!continue_){
+            return;
+        }
+        $('.eduArea').each(function (i) {
+            if ($('input:checked',$(this)).length<1) {
+                alert(str+ (infConmplete_innovate_personal?'':(++i) )   +'成员学历');
+                continue_=false;
+                e.preventDefault();
+                return false;
+            }
+        });
+
+
     })
 </script>
 </body>

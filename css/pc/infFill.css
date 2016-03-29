@@ -108,6 +108,7 @@
     width: 315px;
 }
 .choose_topic ul li input{
+    visibility: hidden;
 }
 .choose_topic ul li label{
     cursor: pointer;
@@ -168,7 +169,7 @@ label{
 .top_a_label{
     width: 100%;
 }
-label input{
+.top_a_label input,.left_label input,.right_label input{
     /*visibility: hidden;*/
     position: absolute;
 }
@@ -191,6 +192,6 @@ label input{
     border: none;
 }
 #school1,.schools{
-    margin-left: 2px;
-    width: 33%;
-}
+     margin-left: 2px;
+     width: 33%;
+ }

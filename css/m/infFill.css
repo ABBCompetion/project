@@ -9,10 +9,11 @@
     margin:auto;
 }
 .infFill .selectArea{
+    text-align: center;
     color:#878787;
     font-size: .4em;
     padding-top:3%;
-    width: 45%;
+    width: 100%;
     min-width: 250px;
     height: 30px;
     margin: auto;
@@ -33,29 +34,28 @@
     margin-top:2px;
 }
 .infFill .content .input_area .radio_style{
-    margin-left: 20px;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: .8rem;;
 }
 .infFill .content .input_area .fir_radio_style{
-    margin-left: 13px;
+    margin-left: .8rem;;
 }
 .infFill .content .input_area .input_value{
-    font-size: 12px;
+    font-size: .8rem;;
     margin-left: 5px;
 }
 .infFill .content .inf_span{
     display: inline-block;
     margin: auto;
     width: 22%;
-    font-size: 13px;
+    font-size: .8rem;;
     text-align: left;
 }
 .infFill .content .inf_input{
     margin-left: 10px;
     text-indent: .5rem;
     width: 70%;
-    height: 38px;
+    height: 2.5rem;
     color:black;
     background-color:#F5F5F5;
     border:none;
@@ -88,7 +88,7 @@
 .infFill .content .choose_topic{
     margin-top: 1rem;
     margin-left: 1rem;
-    font-size: 13px;
+    font-size: 1rem;
     width: 92%;
 }
 .infFill .content .choose_topic .input_icon{
@@ -99,7 +99,7 @@
 }
 .choose_topic .first_a,.choose_topic .second_a{
 
-    font-size: 13px;
+    font-size: .8rem;;
     text-align: center;
     line-height: 35px;
     display: inline-block;
@@ -109,7 +109,7 @@
 .choose_topic .second_a{
 }
 .choose_topic .a_style2{
-    background-color:#F6F6F6;
+    background-color: #f2f2f2;
     color:#65B2E0;    width: 100%;
 
 }
@@ -122,6 +122,7 @@
 }
 .infFill .btnArea{
     width:100%;
+    margin:2rem auto;
 }
 .infFill .selectBtn{
     border:none;
@@ -147,8 +148,8 @@ label{
 .top_a_label{
     width: 100%;
 }
-label input{
-    /*visibility: hidden;*/
+.top_a_label input,.left_label input,.right_label input{
+    visibility: hidden;
     position: absolute;
 }
 .left_label{
@@ -159,16 +160,17 @@ label input{
     position: relative;
     width: 60%;
 }
-#sheng12,#school1{
+
+#sheng12,#school1,.schools{
     margin-left: 10px;
     text-indent: .5rem;
-    width: 27%;
-    height: 38px;
+    width: 36%;
+    height: 2.5rem;
     color: black;
     background-color: #F5F5F5;
     border: none;
 }
-#school1{
-    margin-left: 0px;
-    width: 43%;
+#school1,.schools{
+    margin-left: 2px;
+    width: 33%;
 }
