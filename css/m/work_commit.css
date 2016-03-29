@@ -152,12 +152,12 @@
 
 }
 .tip{
-    text-align: left;
+    text-align: center;
     line-height: 1.2rem;
     color: #a3a3a3;
     font-size: .8rem;
-    margin: auto;
-    width: 47%;
+    margin: 1rem auto;
+    width: 90%;
     border: none;
     vertical-align: middle;
 }

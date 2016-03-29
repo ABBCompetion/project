@@ -44,6 +44,7 @@
 .helpArea .forgetPas{
     display: inline-block;
     width: 20%;
+    min-width: 55px;
     float: right;
     text-decoration:underline ;
     padding-left: 20%;
