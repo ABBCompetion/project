@@ -11,9 +11,8 @@
 
 }
 .success .content .text{
-    min-width: 300px;
+    width: 300px;
     position:relative;
-    width:80%;
     margin:auto;
     margin-top: 8%;
 }
