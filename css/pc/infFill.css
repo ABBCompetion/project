@@ -65,6 +65,7 @@
     font-size: 14px;
     width: 320px;
     height: 38px;
+    line-height: 38px;
     color:black;
     background-color:#F5F5F5;
     border:none;
@@ -155,6 +156,8 @@
     font-size: 14px;
     cursor: pointer;
     margin-left:10px ;
+    vertical-align: middle;
+
 }
 .infInnovation .content .inf_span,.infInnovation .content .topic_text{
     width:220px
