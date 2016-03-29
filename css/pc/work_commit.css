@@ -72,7 +72,7 @@
     border:none;
 }
 .work_commit .content .inf_input{
-    margin-left: 6px;
+    margin-left: 10px;
     padding-left: 8px;
     width: 49%;
     height: 38px;
@@ -141,6 +141,7 @@
     text-align: center;
     width: 160px;
     line-height: 35px;
+    height: 35px;
     display: inline-block;
     background-color: #08609F;
     font-size: 14px;

@@ -109,7 +109,7 @@ a{
 }
 .commonInput{
     width:45%;
-    min-width:250px;
+    max-width:350px;
     margin: auto;
     height: 45px;
     position: relative;
@@ -133,14 +133,14 @@ a{
 }
 #main .verCode{
     width:45%;
-    min-width:250px;
+    max-width:350px;
     margin: auto;
     height: 45px;
 }
 .commonBtnArea{
     width:45%;
     margin: auto;
-    min-width:250px;
+    max-width:350px;
 }
 .commonBtnArea .commonBtn{
     width:100%;
