@@ -2,22 +2,23 @@
     width: 100%;
 }
 .register .content .heading{
-    width: 14%;
+    width: 100%;
     min-width: 57px;
-    color:red;
+    color: red;
     font-size: 14px;
     margin: auto;
     margin-top: 1%;
+    text-align: center;
 }
 .register .selectArea{
-    color:#878787;
+    color: #878787;
     font-size: .4em;
-    padding-top:3%;
     width: 45%;
     min-width: 250px;
-    height: 30px;
     margin: auto;
-    padding-bottom:2%;
+    margin-top: 1rem;
+    height: 45px;
+    vertical-align: middle;
 }
 .register .choice{
     margin-top: 1%;
@@ -39,4 +40,18 @@
 }
 .goLogin a{
     color:#1367A3;
+}
+.register .input_remind{
+    color:#878787;
+    font-size: 7px;
+    width: 45%;
+    min-width: 250px;
+    margin: auto;
+    text-align: left;
+    vertical-align: top;
+    margin-top: -10px;
+
+}
+.register .selectArea label{
+    display: inline-block;
 }
