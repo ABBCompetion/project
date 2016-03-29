@@ -20,11 +20,9 @@
 }
 .infPreview .textArea{
     width: 500px;
-    margin:auto;
+    margin: auto;
     font-size: 14px;
     color: #8B8B8B;
-    margin-left: 14%;
-    margin-top: 1px;
 }
 .infPreview .txt{
     display: inline-block;
@@ -69,6 +67,7 @@
     font-size: 14px;
     cursor: pointer;
     margin-left:10px ;
+    vertical-align: middle;
 }
 .infPreview .btnArea{
     margin: 45px auto;
@@ -76,7 +75,7 @@
 }
 .infPreview .textArea .other_infText1{
     display: inline-block;
-    width:280px ;
+    width:350px ;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
