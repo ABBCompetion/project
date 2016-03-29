@@ -61,7 +61,7 @@
 }
 .infFill .content .inf_input{
     margin-left: 10px;
-    padding-left: 8px;
+    text-indent: 8px;
     font-size: 14px;
     width: 320px;
     height: 38px;
@@ -86,9 +86,6 @@
     height: 85px;
     margin-top: 40px;
 }
-.infFill .content .third_member{
-    margin-top: 15px;
-}
 .infFill .content .topic_text{
     height: 50px;
     margin-top: 5px;
@@ -108,10 +105,9 @@
 }
 .choose_topic ul li{
     list-style: none;
-    width: 340px;
+    width: 315px;
 }
 .choose_topic ul li input{
-    display: none;
 }
 .choose_topic ul li label{
     cursor: pointer;
@@ -124,18 +120,19 @@
     display: inline-block;
 }
 .choose_topic .first_a{
-    width: 120px;
+    width: 100%;
 }
 .choose_topic .second_a{
-    width: 200px;
+    width: 100%;
 }
-.choose_topic .a_style1{
-    background-color:  #65B2E0;
-    color:#F6F6F6;
-}
+
 .choose_topic .a_style2{
     background-color:#F6F6F6;
     color:#65B2E0;
+}
+.infFill .content .choose_topic .a_style1{
+    background-color:  #65B2E0;
+    color:#F6F6F6;
 }
 .infFill .content .getInf_area{
     height: 180px;
@@ -160,3 +157,26 @@
     width:205px;
 }
 
+label{
+    display: inline-block;
+    *zoom:1;
+    *display: inline
+}
+.choose_topic .top_a{
+    width: 100%;
+}
+.top_a_label{
+    width: 100%;
+}
+label input{
+    /*visibility: hidden;*/
+    position: absolute;
+}
+.left_label{
+    position: relative;
+    width: 40%;
+}
+.right_label{
+    position: relative;
+    width: 60%;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
-          content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width">
+          content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalabel=0,width=device-width">
     <meta name="format-detection" content="telephone=no,email=no,address=no">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="创新大赛信息填写">
@@ -53,7 +53,7 @@
                     <div class="textHead"><a>创新大赛</a></div>
                     <div class="line"><img src="img/line.png"></div>
                 </div>
-                <form>
+                <form method="POST" action="commit_success.html">
                     <div class="content">
                         <p class="heading">选择参赛形式</p>
                         <div class="selectArea">
@@ -62,24 +62,23 @@
                         </div>
                         <div class="input_area">
                             <span class="inf_span"><span class="red">*</span>中文姓名</span>
-                            <input class="inf_input" type="text" placeholder="请填写真实姓名，提交后不可更改">
+                            <input class="inf_input" type="text" name="name" placeholder="请填写真实姓名，提交后不可更改">
                         </div>
                         <div class="input_area">
                             <span class="inf_span"><span class="red">*</span>性别</span>
-                            <input class="fir_radio_style" type="radio"><span class="input_value">男</span>
-                            <input class="radio_style" type="radio"><span class="input_value">女</span>
+                            <input class="fir_radio_style"  name='sex' value="man" type="radio"><span class="input_value">男</span>
+                            <input class="radio_style"  name='sex' value="woman" type="radio"><span class="input_value">女</span>
                         </div>
                         <div class="input_area">
                             <span class="inf_span"><span class="red">*</span>手机号码</span>
-                            <input class="inf_input"  type="text" placeholder="请填写有效的手机号码，提交后不可更改">
+                            <input class="inf_input" name="phone"  type="text" placeholder="请填写有效的手机号码，提交后不可更改">
                         </div>
                         <div class="input_area">
                             <span class="inf_span">邮箱</span>
-                            <input class="inf_input"  type="text">
+                            <input class="inf_input" name="mail"  type="text">
                         </div>
                         <div class="input_area">
                             <span class="inf_span"><span class="red">*</span>学校</span>
-                            <input style="display: none" class="inf_input"  type="text" value="北京大学">
                             <select class="inf_input">
                                 <option value="北京大学">北京大学</option>
                                 <option value="上海大学">上海大学</option>
@@ -91,11 +90,8 @@
                         </div>
                         <div class="input_area">
                             <span class="inf_span"><span class="red">*</span>专业类别</span>
-                            <input style="display: none" class="inf_input"  type="text" value="软件工程">
                             <select class="inf_input">
-                                <option value="软件工程">软件工程</option>
-                                <option value="计算机">计算机</option>
-                                <option value="教育">教育</option>
+                                <option value="">请选择</option><option value="100">计算机科学与技术</option><option value="110">电子科学与技术</option><option value="120">信息与通信工程</option><option value="130">电子信息工程类</option><option value="140">软件工程类</option><option value="150">机械工程/车辆工程</option><option value="160">电力系统及其自动化</option><option value="170">航空航天类</option><option value="180">生物工程类</option><option value="190">材料科学与工程</option><option value="200">环境科学类</option><option value="210">交通物流类</option><option value="220">工商管理类</option><option value="230">经济学类</option><option value="240">财会类</option><option value="250">统计学类</option><option value="260">物理学类</option><option value="270">化学类</option><option value="280">数学类</option><option value="290">艺术类</option><option value="300">心理学类</option><option value="310">法学类</option><option value="320">外国语言文学类</option><option value="330">管理学</option><option value="340">公共管理类</option><option value="350">土建类</option><option value="360">食品科学与工程</option><option value="370">基础医学类</option><option value="380">药学类</option><option value="400">电气工程及其自动化</option><option value="410">轮机</option><option value="420">安全工程</option><option value="430">热能与动力工程</option><option value="500">力学/工程力学</option><option value="510">控制科学与工程</option><option value="520">工业工程与管理</option><option value="530">动力工程及工程热物理</option><option value="540">电力电子与电力传动</option><option value="550">机械制造及其自动化</option><option value="560">市场营销</option><option value="570">物流管理</option><option value="580">高压绝缘技术</option><option value="590">电机与电器</option><option value="600">自动化</option><option value="90000">其他</option>
                             </select>
                         </div>
                         <div class="input_area">
@@ -110,7 +106,6 @@
                         </div>
                         <div class="input_area">
                             <span class="inf_span"><span class="red">*</span>毕业时间</span>
-                            <input style="display: none" class="inf_input"  type="text" value="2016">
                             <select class="inf_input time_input">
                                 <option value="2016">2016</option>
                                 <option value="2015">2017</option>
@@ -120,7 +115,6 @@
                                 <option value="2020">2021</option>
                             </select>
                             <span>年</span>
-                            <input style="display: none" class="inf_input"  type="text" value="12">
                             <select class="inf_input time_input">
                                 <option value="12">12</option>
                                 <option value="11">11</option>
@@ -128,181 +122,43 @@
                             </select>
                             <span>月</span>
                         </div>
-                        <div class="second_member">
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>第二名成员中文姓名</span>
-                                <input class="inf_input" type="text" placeholder="请填写真实姓名，提交后不可更改">
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>性别</span>
-                                <input class="fir_radio_style" type="radio"><span class="input_value">男</span>
-                                <input class="radio_style" type="radio"><span class="input_value">女</span>
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>手机号码</span>
-                                <input class="inf_input"  type="text" placeholder="请填写有效的手机号码，提交后不可更改">
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span">邮箱</span>
-                                <input class="inf_input"  type="text">
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>学校</span>
-                                <input style="display: none" class="inf_input"  type="text" value="北京大学">
-                                <select class="inf_input">
-                                    <option value="北京大学">北京大学</option>
-                                    <option value="上海大学">上海大学</option>
-                                    <option value="北京大学">北京大学</option>
-                                    <option value="上海大学">上海大学</option>
-                                    <option value="北京大学">北京大学</option>
-                                    <option value="上海大学">上海大学</option>
-                                </select>
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>专业类别</span>
-                                <input style="display: none" class="inf_input"  type="text" value="软件工程">
-                                <select class="inf_input">
-                                    <option value="软件工程">软件工程</option>
-                                    <option value="计算机">计算机</option>
-                                    <option value="教育">教育</option>
-                                </select>
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>专业名称</span>
-                                <input class="inf_input"  type="text" placeholder="手动填写">
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>学历</span>
-                                <input class="fir_radio_style" type="radio" value=""><span class="input_value">本科生</span>
-                                <input class="radio_style" type="radio" value=""><span class="input_value">硕士生</span>
-                                <input class="radio_style" type="radio" value=""><span class="input_value">博士生</span>
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>毕业时间</span>
-                                <input style="display: none" class="inf_input"  type="text" value="2016">
-                                <select class="inf_input time_input">
-                                    <option value="2016">2016</option>
-                                    <option value="2015">2017</option>
-                                    <option value="2014">2018</option>
-                                    <option value="2018">2018</option>
-                                    <option value="2019">2019</option>
-                                    <option value="2020">2021</option>
-                                </select>
-                                <span>年</span>
-                                <input style="display: none" class="inf_input"  type="text" value="12">
-                                <select class="inf_input time_input">
-                                    <option value="12">12</option>
-                                    <option value="11">11</option>
-                                    <option value="10">10</option>
-                                </select>
-                                <span>月</span>
-                            </div>
+                        <div id="appendArea">
+
                         </div>
-                        <div class="add_member_btn"><img src="img/add_member_btn.png"></div>
-                        <div class="third_member">
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>第三名成员中文姓名</span>
-                                <input class="inf_input" type="text" placeholder="请填写真实姓名，提交后不可更改">
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>性别</span>
-                                <input class="fir_radio_style" type="radio"><span class="input_value">男</span>
-                                <input class="radio_style" type="radio"><span class="input_value">女</span>
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>手机号码</span>
-                                <input class="inf_input"  type="text" placeholder="请填写有效的手机号码，提交后不可更改">
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span">邮箱</span>
-                                <input class="inf_input"  type="text">
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>学校</span>
-                                <input style="display: none" class="inf_input"  type="text" value="北京大学">
-                                <select class="inf_input">
-                                    <option value="北京大学">北京大学</option>
-                                    <option value="上海大学">上海大学</option>
-                                    <option value="北京大学">北京大学</option>
-                                    <option value="上海大学">上海大学</option>
-                                    <option value="北京大学">北京大学</option>
-                                    <option value="上海大学">上海大学</option>
-                                </select>
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>专业类别</span>
-                                <input style="display: none" class="inf_input"  type="text" value="软件工程">
-                                <select class="inf_input">
-                                    <option value="软件工程">软件工程</option>
-                                    <option value="计算机">计算机</option>
-                                    <option value="教育">教育</option>
-                                </select>
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>专业名称</span>
-                                <input class="inf_input"  type="text" placeholder="手动填写">
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>学历</span>
-                                <input class="fir_radio_style" type="radio" value=""><span class="input_value">本科生</span>
-                                <input class="radio_style" type="radio" value=""><span class="input_value">硕士生</span>
-                                <input class="radio_style" type="radio" value=""><span class="input_value">博士生</span>
-                            </div>
-                            <div class="input_area">
-                                <span class="inf_span"><span class="red">*</span>毕业时间</span>
-                                <input style="display: none" class="inf_input"  type="text" value="2016">
-                                <select class="inf_input time_input">
-                                    <option value="2016">2016</option>
-                                    <option value="2015">2017</option>
-                                    <option value="2014">2018</option>
-                                    <option value="2018">2018</option>
-                                    <option value="2019">2019</option>
-                                    <option value="2020">2021</option>
-                                </select>
-                                <span>年</span>
-                                <input style="display: none" class="inf_input"  type="text" value="12">
-                                <select class="inf_input time_input">
-                                    <option value="12">12</option>
-                                    <option value="11">11</option>
-                                    <option value="10">10</option>
-                                </select>
-                                <span>月</span>
-                            </div>
-                        </div>
+
+
+
+
+
+
                         <div class="input_area topic_area">
                             <span class="inf_span topic_text"><span class="red">*</span>你感兴趣的课题</span>
                             <div class="choose_topic">
-                                <input class="input_icon" type="radio" value=""><span class="input_value">智慧能源</span><br/>
-                                <input class="input_icon" type="radio" value=""><span class="input_value">智能建筑</span><br/>
-                                <input class="input_icon" type="radio" value=""><span class="input_value">智能机器人技术（同时参加创新挑战赛
-                    <input type="radio" checked="checked" name="isBoth" value="1">是
-                    <input type="radio" name="isBoth" alue="0">否）
-                    </span>
+                                <input class="input_icon" type="radio" name="interest" value="智慧能源"><span class="input_value">智慧能源</span><br/>
+                                <input class="input_icon" type="radio" name="interest" value="智能建筑"><span class="input_value">智能建筑</span><br/>
+                                <input class="input_icon" type="radio" name="interest" value="智能机器人技术"><span class="input_value">智能机器人技术
+                                <span class="choose_topic_third"></span></span>
                             </div>
                         </div>
                         <div class="input_area getInf_area">
                             <span class="inf_span topic_text"><span class="red">*</span>如何获取ABB大赛信息</span>
                             <div class="choose_topic">
                                 <ul>
-                                    <li><input type="checkbox" /><label><a class="first_a a_style1">ABB官网</a></label>
-                                        <input type="checkbox" /><label><a class="second_a a_style2">ABB官方微信/招聘官方微信</a></label>
+                                    <li><label class="top_a_label"><input type="checkbox" /><a class="second_a top_a a_style2">ABB官方微信/招聘官方微信</a></label>
                                     </li>
-                                    <li><input type="checkbox" /><label><a class="first_a a_style2">校园BBS</a></label>
-                                        <input type="checkbox" /><label><a class="second_a a_style1">院系老师/院系网站</a></label>
+                                    <li><label class="left_label"><input type="checkbox" /><a class="first_a a_style2">校园BBS</a></label><label class="right_label"><input type="checkbox" /><a class="second_a a_style2 ">院系老师/院系网站</a></label>
                                     </li>
-                                    <li><input type="checkbox" /><label><a class="first_a a_style1">海报</a></label>
-                                        <input type="checkbox" /><label><a class="second_a a_style2">应届生网站</a></label>
+                                    <li><label class="left_label"><input type="checkbox" /><a class="first_a a_style2 ">海报</a></label><label class="right_label"><input type="checkbox" /><a class="second_a a_style2">应届生网站</a></label>
                                     </li>
-                                    <li><input type="checkbox" /><label><a class="first_a a_style2">大赛官方QQ平台</a></label>
-                                        <input type="checkbox" /><label><a class="second_a a_style1">其他微信公众账号</a></label>
+                                    <li><label class="left_label"><input type="checkbox" /><a class="first_a a_style2">大赛官方QQ平台</a></label><label class="right_label"><input type="checkbox" /><a class="second_a a_style2 ">其他微信公众账号</a></label>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="btnArea">
-                        <a class="selectBtn">确认</a>
-                        <a class="selectBtn">返回</a>
+                        <input type="submit" class="selectBtn" value="确认">
+                        <a href="welcome.html" class="selectBtn">返回</a>
                     </div>
                 </form>
                 <div class="content"></div>
@@ -313,8 +169,47 @@
 
     <div id="footer">  © 版权所有 2016 ABB | 供应商信息/版本说明 | Cookie和隐私政策</div>
 </div>
+<script src="js/jquery.min.js"></script>
+<script src='js/placeholderfriend.js'></script>
+<script>
+    $('input[type="checkbox"]').change(function () {
+        $('input[type="checkbox"]').not(':checked').each(function () {
+            $(this).siblings().removeClass('a_style1');
 
-<!--<script src="js/zepto.min.js"></script>-->
+        })
+        $('input[type="checkbox"]:checked').each(function () {
+             $(this).siblings().addClass('a_style1');
+        });
+    });
 
+    $('.selectArea>input').change(function () {
+        console.log($(this).val())
+        if($(this).val()==='2'){
+            $('#appendArea').html('<div class="second_member"><div class="input_area"><span class="inf_span"><span class="red">*</span>第二名成员中文姓名</span><input class="inf_input" type="text" placeholder="请填写真实姓名，提交后不可更改"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>性别</span><input class="fir_radio_style" type="radio"><span class="input_value">男</span><input class="radio_style" type="radio"><span class="input_value">女</span></div><div class="input_area"><span class="inf_span"><span class="red">*</span>手机号码</span><input class="inf_input"  type="text" placeholder="请填写有效的手机号码，提交后不可更改"></div><div class="input_area"><span class="inf_span">邮箱</span><input class="inf_input"  type="text"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>学校</span><select class="inf_input"><option value="北京大学">北京大学</option><option value="上海大学">上海大学</option><option value="北京大学">北京大学</option><option value="上海大学">上海大学</option><option value="北京大学">北京大学</option><option value="上海大学">上海大学</option></select></div><div class="input_area"><span class="inf_span"><span class="red">*</span>专业类别</span><select class="inf_input"><option value="软件工程">软件工程</option><option value="计算机">计算机</option><option value="教育">教育</option></select></div><div class="input_area"><span class="inf_span"><span class="red">*</span>专业名称</span><input class="inf_input"  type="text" placeholder="手动填写"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>学历</span><input class="fir_radio_style" type="radio" value=""><span class="input_value">本科生</span><input class="radio_style" type="radio" value=""><span class="input_value">硕士生</span><input class="radio_style" type="radio" value=""><span class="input_value">博士生</span></div><div class="input_area"><span class="inf_span"><span class="red">*</span>毕业时间</span><select class="inf_input time_input"><option value="2016">2016</option><option value="2015">2017</option><option value="2014">2018</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2021</option></select><span>年</span><select class="inf_input time_input"><option value="12">12</option><option value="11">11</option><option value="10">10</option></select><span>月</span></div></div><div class="add_member_btn innovate_add_member"><img src="img/add_member_btn.png"></div>');
+            $('.innovate_add_member').click(function () {
+                //todo html
+                $(this).after($('<div class="second_member"><div class="input_area"><span class="inf_span"><span class="red">*</span>第三名成员中文姓名</span><input class="inf_input" type="text" placeholder="请填写真实姓名，提交后不可更改"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>性别</span><input class="fir_radio_style" type="radio"><span class="input_value">男</span><input class="radio_style" type="radio"><span class="input_value">女</span></div><div class="input_area"><span class="inf_span"><span class="red">*</span>手机号码</span><input class="inf_input"  type="text" placeholder="请填写有效的手机号码，提交后不可更改"></div><div class="input_area"><span class="inf_span">邮箱</span><input class="inf_input"  type="text"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>学校</span><select class="inf_input"><option value="北京大学">北京大学</option><option value="上海大学">上海大学</option><option value="北京大学">北京大学</option><option value="上海大学">上海大学</option><option value="北京大学">北京大学</option><option value="上海大学">上海大学</option></select></div><div class="input_area"><span class="inf_span"><span class="red">*</span>专业类别</span><select class="inf_input"><option value="软件工程">软件工程</option><option value="计算机">计算机</option><option value="教育">教育</option></select></div><div class="input_area"><span class="inf_span"><span class="red">*</span>专业名称</span><input class="inf_input"  type="text" placeholder="手动填写"></div><div class="input_area"><span class="inf_span"><span class="red">*</span>学历</span><input class="fir_radio_style" type="radio" value=""><span class="input_value">本科生</span><input class="radio_style" type="radio" value=""><span class="input_value">硕士生</span><input class="radio_style" type="radio" value=""><span class="input_value">博士生</span></div><div class="input_area"><span class="inf_span"><span class="red">*</span>毕业时间</span><select class="inf_input time_input"><option value="2016">2016</option><option value="2015">2017</option><option value="2014">2018</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2021</option></select><span>年</span><select class="inf_input time_input"><option value="12">12</option><option value="11">11</option><option value="10">10</option></select><span>月</span></div></div>	'));
+                $(this).hide();
+            });
+        }
+        else{
+            $('#appendArea').html('');
+        }
+    });
+
+
+
+    $('.choose_topic>input').change(function () {
+        if( $('.choose_topic>input').eq(2).is(':checked')){
+            alert('（文字内容稍后提供）')
+            $('.choose_topic_third').html('（同时参加创新挑战赛<input type="radio" checked="checked" name="join_challenge" value="1">是<input type="radio"  name="join_challenge"  checked="checked"  value="0">否）');
+        }
+        else{
+            $('.choose_topic_third').html('');
+        }
+    })
+
+
+</script>
 </body>
 </html>
