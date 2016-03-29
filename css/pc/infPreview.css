@@ -12,15 +12,15 @@
 }
 .infPreview .preview_textHead a{
     color: #07619F;
-    font-size: 1.5em;
-    display: block;
-    width: 195px;
-    margin: auto;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+
 }
 .infPreview .textArea{
     width: 500px;
     margin:auto;
-    height: 30px;
     font-size: 14px;
     color: #8B8B8B;
     margin-left: 14%;
@@ -41,14 +41,17 @@
 }
 .infPreview .textArea .infText1,.infPreview .textArea .infText2{
     width: 160px;
+    display: inline-block;
     margin-left: 2px;
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
 }
 .infPreview .first_man ,.infPreview .second_man ,.infPreview .third_man ,.infPreview .other{
     margin-top: 20px;
 }
 .infPreview .other{
-    padding-bottom: 10%;
 }
 .infPreview .btnArea{
     width:100%;
@@ -67,5 +70,14 @@
     margin-left:10px ;
 }
 .infPreview .btnArea{
-    margin-left: 20%;
+    margin: 45px auto;
+    text-align: center;
+}
+.infPreview .textArea .other_infText1{
+    display: inline-block;
+    width:280px ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    vertical-align: top;
 }
