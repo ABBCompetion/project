@@ -29,23 +29,23 @@
 }
 
 .infPreview .textArea .title1 {
-    width: 33%;
-    color: black;
+    width: 23%;
+    color: #474747;
     display: inline-block;
     text-align: right;
     vertical-align: middle;
 }
 
 .infPreview .textArea .title2 {
-    color: black;
+    color: #474747;
     display: inline-block;
-    width: 33%;
+    width: 23%;
     text-align: right;
     vertical-align: middle;
 }
 
 .infPreview .textArea .infText1, .infPreview .textArea .infText2 {
-    width: 66%;
+    width: 76%;
     margin-left: 2px;
     display: inline-block;
     white-space: nowrap;
