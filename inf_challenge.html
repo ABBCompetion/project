@@ -29,6 +29,7 @@
 <div id="wrap">
     <div id="head">
         <span class="logo"></span>
+
         <div class="anchorArea">
 
             <a href="http://new.abb.com/cn/smart-technology/innovation-2016/topics">大赛首页</a> |
@@ -60,8 +61,10 @@
                         </div>
                         <div class="input_area">
                             <span class="inf_span"><span class="red">*</span>性别</span>
-                            <input class="fir_radio_style" name="sex" value="0" type="radio" checked="checked"><span class="input_value">男</span>
-                            <input class="radio_style" name="sex" value="1" type="radio"><span class="input_value">女</span>
+                            <input class="fir_radio_style" name="sex" value="0" type="radio" checked="checked"><span
+                                class="input_value">男</span>
+                            <input class="radio_style" name="sex" value="1" type="radio"><span
+                                class="input_value">女</span>
                         </div>
                         <div class="input_area team_number">
                             <span class="inf_span"><span class="red">*</span>团体成员人数</span>
@@ -84,54 +87,71 @@
                         </div>
                         <div class="input_area">
                             <span class="inf_span">邮箱</span>
-                            <input class="inf_input"  type="text">
+                            <input class="inf_input" name="mail" type="text">
                         </div>
                         <div class="input_area ">
                             <span class="inf_span binary_choose"><span class="red">*</span>是否已组建公司</span>
-                            <input class="fir_radio_style" name="isHaveCompany" value="1" type="radio"><span class="input_value"/>是</span>
-                            <input class="radio_style" name="isHaveCompany" value="0" type="radio" checked="checked" /><span class="input_value">否</span>
+                            <input class="fir_radio_style" name="isHaveCompany" value="1" type="radio"><span
+                                class="input_value"/>是</span>
+                            <input class="radio_style" name="isHaveCompany" value="0" type="radio"
+                                   checked="checked"/><span class="input_value">否</span>
                         </div>
                         <div class="input_area ">
                             <span class="inf_span binary_choose"><span class="red">*</span>是否已有资助资金</span>
-                            <input class="fir_radio_style" name="isAid" value="1" type="radio"/><span class="input_value">是</span>
-                            <input class="radio_style"  name="isAid" value="0" type="radio" checked="checked" /><span class="input_value">否</span>
+                            <input class="fir_radio_style" name="isAid" value="1" type="radio"/><span
+                                class="input_value">是</span>
+                            <input class="radio_style" name="isAid" value="0" type="radio" checked="checked"/><span
+                                class="input_value">否</span>
                         </div>
                         <div class="input_area ">
                             <span class="inf_span binary_choose"><span class="red">*</span>是否已或正在申请专利或知识产权</span>
-                            <input class="fir_radio_style" name="isHaveOwn" value="1" type="radio"/><span class="input_value">是</span>
-                            <input class="radio_style" name="isHaveOwn" value="0" type="radio"checked="checked"/><span class="input_value">否</span>
+                            <input class="fir_radio_style" name="isHaveOwn" value="1" type="radio"/><span
+                                class="input_value">是</span>
+                            <input class="radio_style" name="isHaveOwn" value="0" type="radio" checked="checked"/><span
+                                class="input_value">否</span>
                         </div>
                         <div class="input_area ">
                             <span class="inf_span binary_choose"><span class="red">*</span>是否已有作品原型或产品演示</span>
-                            <input class="fir_radio_style" name="isHaveWork" value="1" type="radio" /><span class="input_value">是</span>
-                            <input class="radio_style" name="isHaveWork" value="0" type="radio" checked="checked"/><span class="input_value">否</span>
+                            <input class="fir_radio_style" name="isHaveWork" value="1" type="radio"/><span
+                                class="input_value">是</span>
+                            <input class="radio_style" name="isHaveWork" value="0" type="radio" checked="checked"/><span
+                                class="input_value">否</span>
                         </div>
                         <div class="input_area getInf_area">
                             <span class="inf_span topic_text"><span class="red">*</span>如何获取ABB大赛信息</span>
+
                             <div class="choose_topic">
                                 <ul>
-                                    <li><label class="top_a_label"><input type="checkbox"/><a
+                                    <li><label class="top_a_label"><input name="getInforFrom" type="checkbox"
+                                                                          value="ABB官方微信/招聘官方微信"/><a
                                             class="second_a top_a a_style2">ABB官方微信/招聘官方微信</a></label>
                                     </li>
-                                    <li><label class="left_label"><input type="checkbox"/><a
+                                    <li><label class="left_label"><input name="getInforFrom" type="checkbox"
+                                                                         value="校园BBS"/><a
                                             class="first_a a_style2">校园BBS</a></label><label
-                                            class="right_label"><input type="checkbox"/><a
+                                            class="right_label"><input name="getInforFrom" type="checkbox"
+                                                                       value="院系老师/院系网站"/><a
                                             class="second_a a_style2 ">院系老师/院系网站</a></label>
                                     </li>
-                                    <li><label class="left_label"><input type="checkbox"/><a
+                                    <li><label class="left_label"><input name="getInforFrom" type="checkbox"
+                                                                         value="海报"/><a
                                             class="first_a a_style2 ">海报</a></label><label
-                                            class="right_label"><input type="checkbox"/><a
+                                            class="right_label"><input name="getInforFrom" type="checkbox"
+                                                                       value="应届生网站"/><a
                                             class="second_a a_style2">应届生网站</a></label>
                                     </li>
-                                    <li><label class="left_label"><input type="checkbox"/><a
-                                            class="first_a a_style2">大赛官方QQ平台</a></label><label class="right_label"><input
-                                            type="checkbox"/><a class="second_a a_style2 ">其他微信公众账号</a></label>
+                                    <li><label class="left_label"><input name="getInforFrom" type="checkbox"
+                                                                         value="大赛官方QQ平台"/><a
+                                            class="first_a a_style2">大赛官方QQ平台</a></label><label
+                                            class="right_label"><input
+                                            type="checkbox" name="getInforFrom" value="其他微信公众账号"/><a
+                                            class="second_a a_style2 ">其他微信公众账号</a></label>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="btnArea">
-                            <input  type="submit" class="selectBtn" value="确定">
+                            <input type="submit" class="selectBtn" value="确定">
                             <a class="selectBtn">返回</a>
                         </div>
                     </div>
@@ -140,7 +160,7 @@
             </div>
         </div>
     </div>
-    <div id="footer">  © 版权所有 2016 ABB | 供应商信息/版本说明 | Cookie和隐私政策</div>
+    <div id="footer"> © 版权所有 2016 ABB | 供应商信息/版本说明 | Cookie和隐私政策</div>
 </div>
 <script src="js/jquery.min.js"></script>
 <script src='js/placeholderfriend.js'></script>
@@ -148,7 +168,6 @@
 <script src="js/checkinput.js"></script>
 <script>
 
-    bindPhoneNumCheck();
 
     $('input[type="checkbox"]').change(function () {
         $('input[type="checkbox"]').not(':checked').each(function () {
@@ -159,41 +178,46 @@
             $(this).siblings().addClass('a_style1');
         });
     });
-    //校验手机号
-    function bindPhoneNumCheck(){
-        $('input[name="phone"]').each(function () {
-            $(this).unbind('blur');
-            $(this).bind('blur', function () {
-                if (!CheckInput.mobile($(this).val())) {
-                    alert('手机号格式不正确');
-                }
-                else {
-                    $.ajax({
-                        url: 'http://abbinnovation.careerstart.cn/checkphone.asp',
-                        dataType: 'html',
-                        type: 'GET',
-                        data: {vPhone: $(this).val()},
-                        success: function (data) {
-                            if (data === '1') {
-                                alert('手机号码已被占用');
-                            }
-                            else {
 
-                            }
-                        },
-                        error: function () {
-                            alert('网络错误');
-                        }
-                    })
-                }
 
+    $('input[name="phone"]').blur(function () {
+
+        if (!CheckInput.mobile($(this).val())) {
+            alert('手机号格式不正确');
+        }
+        else {
+            $.ajax({
+                url: 'http://abbinnovation.careerstart.cn/checkphone.asp',
+                dataType: 'html',
+                type: 'GET',
+                data: {vPhone: $(this).val()},
+                success: function (data) {
+                    if (data === '1') {
+                        alert('手机号码已被占用');
+                    }
+                    else {
+
+                    }
+                },
+                error: function () {
+                    alert('网络错误');
+                }
             })
-        })
-    }
+        }
+    })
 
+    $('form').submit(function (e) {
+        if (!$('input[name="chinese_name"]').val()) {
+            alert('请填写姓名')
+            e.preventDefault();
+        }
+        else if (!$('input[name="phone"]').val() || !CheckInput.mobile($('input[name="phone"]').val())) {
+            alert('请填写正确的手机号码')
+            e.preventDefault();
+        }
 
+    })
 </script>
-<!--<script src="js/zepto.min.js"></script>-->
 
 </body>
 </html>
