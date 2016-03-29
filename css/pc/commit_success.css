@@ -5,28 +5,26 @@
 .commit_success .content .text {
     min-width: 300px;
     position: relative;
-    width: 61%;
     margin: auto;
     margin-top: 8%;
 }
 .commit_success .text_head{
     margin-top: 4%;
     position: relative;
+    text-align: center;
 }
 .commit_success .content .successImg {
     position: relative;
     display: inline-block;
-    margin-left: 10%;
     width: 50px;
-    position: absolute;
     margin-top: -8px;
 }
 .commit_success h2{
-    display: inline-block;
-    color:red;
-    margin-left: 32%;
+    color: red;
     padding-bottom: 7%;
-    width: 210px;
+    width: 240px;
+    display: inline-block;
+    vertical-align: top;
 
 }
 .commit_success p{
@@ -37,9 +35,9 @@
 }
 .commit_success .btnArea{
     margin: auto;
-    margin-top: 30%;
+    margin-top:10%;
     padding-bottom: 5%;
-    width:350px;
+    text-align: center;
 }
 .commit_success .selectBtn{
     border: none;
@@ -51,12 +49,12 @@
     background-color: #08609F;
     font-size: 14px;
     cursor: pointer;
-    margin-left: 6%;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 .commit_success .remind{
     font-size: 13px;
-    margin-left: 6%;
 }
 .commit_success .time{
     color:#F18509;
