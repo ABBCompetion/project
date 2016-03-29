@@ -11,7 +11,7 @@
 
 }
 .success .content .text{
-    width: 300px;
+    width: 400px;
     position:relative;
     margin:auto;
     margin-top: 8%;
@@ -39,7 +39,7 @@
     font-size: 14px;
 }
 .success .IDinput{
-    width:61%;
+    width:72%;
     margin: auto;
     color:black;
     background-color:#F5F5F5;
@@ -72,4 +72,5 @@
     font-size: 14px;
     cursor: pointer;
     vertical-align: middle;
+    margin: 10px;
 }
