@@ -105,7 +105,7 @@
                                                                                            class="a-upload"><input
                                 name="file" class="inf_input" id="uploadFile"
                                 type="file"
-                                accept=".doc,.docx,.pdf">格式:Word/PDF，不超过10兆</a>
+                                accept=".doc,.docx,.pdf"><span>格式:Word/PDF，不超过10兆</span></span></a>
                         </div>
                         <!--创新赛-->
                         <!--<div class="input_area">-->
@@ -130,18 +130,24 @@
 
     $('#uploadFile').on('change', function () {
         var f = document.getElementById("uploadFile").files;
-        if (f[0].size > 10000000) {
-            alert('请选择不超过10兆的文件');
-            $('.a-upload').text('格式:Word/PDF，不超过10兆')
-            return;
+        if(f){
+            if (f[0].size > 10000000) {
+                alert('请选择不超过10兆的文件');
+                $('.a-upload>span').text('格式:Word/PDF，不超过10兆')
+                return;
+            }
+            else if (f[0].type.indexOf('pdf') < 0 && f[0].type.indexOf('word') < 0) {
+                alert('请选择Word/PDF格式的文件');
+                $('.a-upload>span').text('格式:Word/PDF，不超过10兆')
+                return;
+            }
+            $('.a-upload>span').text(f[0].name)
+
         }
-        else if (f[0].type.indexOf('pdf') < 0 && f[0].type.indexOf('word') < 0) {
-            alert('请选择Word/PDF格式的文件');
-            $('.a-upload').text('格式:Word/PDF，不超过10兆')
-            return;
+        else{
+            $('.a-upload>span').text($(this).val())
         }
 
-        $('.a-upload').text(f[0].name)
     });
 
 
