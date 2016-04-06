@@ -19,14 +19,14 @@
 
 }
 .infPreview .textArea{
-    width: 500px;
+    width: 700px;
     margin: auto;
     font-size: 14px;
     color: #8B8B8B;
 }
 .infPreview .txt{
     display: inline-block;
-    width:240px;
+    width:345px;
 }
 .infPreview .textArea .title1{
     width: 80px;
@@ -75,7 +75,7 @@
 }
 .infPreview .textArea .other_infText1{
     display: inline-block;
-    width:350px ;
+    width:545px ;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;

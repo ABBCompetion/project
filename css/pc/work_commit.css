@@ -65,7 +65,7 @@
 }
 .work_commit .content .half_input{
     padding-left: 8px;
-    width: 177px;
+    width: 212px;
     height: 38px;
     color:black;
     background-color:#F5F5F5;
@@ -74,7 +74,7 @@
 .work_commit .content .inf_input{
     margin-left: 10px;
     padding-left: 8px;
-    width: 49%;
+    width: 420px;
     height: 38px;
     line-height: 38px;
     color: black;
@@ -85,7 +85,7 @@
 .a-upload {
     margin-left: 10px;
     padding-left: 8px;
-    width: 49%;
+    width: 420px;
     line-height: 38px;
     color: #a3a3a3;
     position: relative;
@@ -124,7 +124,7 @@
 .work_commit .content .inf_textArea{
     margin-left: 10px;
     padding-left: 8px;
-    width: 49%;
+    width: 420px;
     height: 120px;
     color: black;
     background-color: #F5F5F5;
@@ -159,3 +159,4 @@
     border: none;
     vertical-align: middle;
 }
+

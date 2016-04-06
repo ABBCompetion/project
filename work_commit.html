@@ -55,9 +55,9 @@
                     <img class="tick" src="img/uploadworkssuc.png">
 
                     <div class="text">
-                        <h2 class="title_fir">欢迎参加<span class="red">ABB创新大赛</span>！</h2>
-
-                        <h2 class="title_sec">请填写你的作品信息并上传作品！</h2>
+                        <h2 class="title_sec"
+                            style="margin-left: -16px;line-height: 72px;font-weight: normal;color: #08609E;text-align: center; font-size: 24px;">
+                            请填写作品信息提交作品！</h2>
                     </div>
                 </div>
                 <p class="title">作品信息</p>
@@ -72,19 +72,21 @@
                             <!--<option value="智慧能源">智慧能源</option>-->
                             <!--<option value="智能建筑">智能建筑</option>-->
                             <!--<option value="智能机器人技术">智能机器人技术</option>-->
-                        <!--</select>-->
+                            <!--</select>-->
                             <!--<select name="title_child" class="half_input select2">-->
-                                <!--<option value="智能配网和微网技术">智能配网和微网技术</option>-->
-                                <!--<option value="电能转换技术">电能转换技术</option>-->
-                                <!--<option value="智慧节能技术">智慧节能技术</option>-->
+                            <!--<option value="智能配网和微网技术">智能配网和微网技术</option>-->
+                            <!--<option value="电能转换技术">电能转换技术</option>-->
+                            <!--<option value="智慧节能技术">智慧节能技术</option>-->
                             <!--</select>-->
 
                             <!--挑战赛-->
-                            <span class="inf_span"><span class="red">*</span>课题名称</span><select name="title_child" class="half_input half_input1" id="tiaozan">
-                                <option value="简洁自然的人机交互">简洁自然的人机交互</option>
-                                <option value="机器智能和机器学习">机器智能和机器学习</option>
-                                <option value="机器人生态系统">机器人生态系统</option>
-                            </select>
+                            <span class="inf_span"><span class="red">*</span>课题名称</span><select name="title_child"
+                                                                                                class="half_input half_input1"
+                                                                                                id="tiaozan">
+                            <option value="简洁自然的人机交互">简洁自然的人机交互</option>
+                            <option value="机器智能和机器学习">机器智能和机器学习</option>
+                            <option value="机器人生态系统">机器人生态系统</option>
+                        </select>
 
 
                         </div>
@@ -109,7 +111,7 @@
                         </div>
                         <!--创新赛-->
                         <!--<div class="input_area">-->
-                            <!--<span class="inf_span"><span class="red">*</span>视频链接</span><input name="video"-->
+                        <!--<span class="inf_span"><span class="red">*</span>视频链接</span><input name="video"-->
                         <!--</div>-->
                     </div>
                     <div class="tip">在2016年7月24日前可重复提交作品，作品以最后一次提交为准。</div>
@@ -123,6 +125,15 @@
     </div>
     <div id="footer"> © 版权所有 2016 ABB | 供应商信息/版本说明 | Cookie和隐私政策</div>
 </div>
+
+<div data-login="false" class="loginArea">
+    <div class="shield"></div>
+    <div class="popup" style="min-height: 100px;">
+        <div class="bar"><a href="javascript:;">×</a></div>
+        <!--此处插入内容-->
+    </div>
+</div>
+
 <script src="js/jquery.min.js"></script>
 <script src='js/placeholderfriend.js'></script>
 <script type="text/javascript">
@@ -130,7 +141,7 @@
 
     $('#uploadFile').on('change', function () {
         var f = document.getElementById("uploadFile").files;
-        if(f){
+        if (f) {
             if (f[0].size > 10000000) {
                 alert('请选择不超过10兆的文件');
                 $('.a-upload>span').text('格式:Word/PDF，不超过10兆')
@@ -142,10 +153,13 @@
                 return;
             }
             $('.a-upload>span').text(f[0].name)
+            $('.loginArea').show();
 
         }
-        else{
-            $('.a-upload>span').text($(this).val())
+        else {
+            $('.a-upload>span').text($(this).val());
+
+
         }
 
     });
@@ -180,11 +194,37 @@
             alert('请选择文件：格式Word/PDF，不超过10兆')
             e.preventDefault();
         }
-        else if ($('input[name="video"]').length>0 && !$('input[name="video"]').val()) {
+        else if ($('input[name="video"]').length > 0 && !$('input[name="video"]').val()) {
             alert('请填写视频链接')
             e.preventDefault();
         }
     })
+
+    setTimeout(function () {
+        //插入样式
+        $('head').append('<style>.loginArea{display:none;position:fixed;top:0;left:0;width:10000px;height:10000px;background-color:rgba(221,221,221,0.62)}.loginArea .popup{width:280px;position:fixed;background-color:#efefef;border:5px solid #d1d1d1}.loginArea .popup .bar{width:100%;height:20px;background-color:#d1d1d1}.loginArea .popup .bar a{display:block;float:right;width:20px;line-height:20px;font-size:25px;margin-top:-3px;text-align:center;color:black}.loginArea .popup .bar a:active{color:white}.loginArea .popup .title{display:inline-block;width:60px;text-align:center}</style>')
+
+//        //弹出层
+//        $('.loginArea').show();
+
+        $(window).bind('resize', function () {
+            $('.loginArea .popup').css({
+                top: ($(window).height() - $('.loginArea .popup').height()) / 2,
+                left: ($(window).width() - $('.loginArea .popup').width()) / 2
+            })
+
+        });
+
+         $('.loginArea .bar a').bind('click', function () {  //弹出消息框右上角按钮点击事件
+             //隐藏层
+             $('.loginArea').hide();
+        });
+
+
+        $(window).resize();
+    }, 1000)
+
 </script>
 </body>
 </html>
+

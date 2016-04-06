@@ -21,6 +21,11 @@
     <link rel="stylesheet" href="css/pc/base.css"/>
     <link rel="stylesheet" href="css/pc/infFill.css"/>
     <![endif]-->
+
+    <style>
+
+    </style>
+
 </head>
 <body>
 <div id="wrap">
@@ -224,39 +229,39 @@
                             <div class="input_area topic_area">
                                 <span class="inf_span topic_text"><span class="red">*</span>你感兴趣的课题</span>
 
-                                <div class="choose_topic">
+                                <div class="choose_topic getInfor">
                                     <label>
                                     <input class="input_icon" type="radio" name="interest" value="智慧能源"><span
                                         class="input_value">智慧能源</span></label><br/>
                                     <label><input class="input_icon" type="radio" name="interest" value="智能建筑"><span
                                         class="input_value">智能建筑</span></label><br/>
                                     <label><input class="input_icon" type="radio" name="interest" value="智能机器人技术"><span
-                                        class="input_value">智能机器人技术
-                                <span class="choose_topic_third"></span>
-                                    </span></label>
+                                        class="input_value">智能机器人技术</span>
+                                <div class="choose_topic_third">
+                                    </div></label>
                                 </div>
                             </div>
                             <div class="input_area getInf_area">
                                 <span class="inf_span topic_text"><span class="red">*</span>如何获取ABB大赛信息</span>
 
-                                <div class="choose_topic">
+                                <div class="choose_topic"   >
                                     <ul>
-                                        <li><label class="top_a_label"><input type="checkbox" name="getInforFrom" value="ABB官方微信/招聘官方微信"/><a
-                                                class="second_a top_a a_style2">ABB官方微信/招聘官方微信</a></label>
+                                        <li><label class="top_a_label"><input type="checkbox" name="getInforFrom" value="ABB官方微信/招聘官方微信"/><span
+                                                class="second_a top_a a_style2">ABB官方微信/招聘官方微信</span></label>
                                         </li>
-                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom" value="校园BBS"/><a
-                                                class="first_a a_style2">校园BBS</a></label><label
-                                                class="right_label"><input type="checkbox" name="getInforFrom" value="院系老师/院系网站"/><a
-                                                class="second_a a_style2 ">院系老师/院系网站</a></label>
+                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom" value="校园BBS"/><span
+                                                class="first_a a_style2">校园BBS</span></label><label
+                                                class="right_label"><input type="checkbox" name="getInforFrom" value="院系老师/院系网站"/><span
+                                                class="second_a a_style2 ">院系老师/院系网站</span></label>
                                         </li>
-                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom" value="海报"/><a
-                                                class="first_a a_style2 ">海报</a></label><label
-                                                class="right_label"><input type="checkbox" name="getInforFrom" value="应届生网站"/><a
-                                                class="second_a a_style2">应届生网站</a></label>
+                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom" value="海报"/><span
+                                                class="first_a a_style2 ">海报</span></label><label
+                                                class="right_label"><input type="checkbox" name="getInforFrom" value="应届生网站"/><span
+                                                class="second_a a_style2">应届生网站</span></label>
                                         </li>
-                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom" value="大赛官方QQ平台"/><a
-                                                class="first_a a_style2">大赛官方QQ平台</a></label><label class="right_label"><input
-                                                type="checkbox" name="getInforFrom" value="其他微信公众账号"/><a class="second_a a_style2 ">其他微信公众账号</a></label>
+                                        <li><label class="left_label"><input type="checkbox" name="getInforFrom" value="大赛官方QQ平台"/><span
+                                                class="first_a a_style2">大赛官方QQ平台</span></label><label class="right_label"><input
+                                                type="checkbox" name="getInforFrom" value="其他微信公众账号"/><span class="second_a a_style2 ">其他微信公众账号</span></label>
                                         </li>
                                     </ul>
                                 </div>
@@ -315,10 +320,10 @@
     });
 
 
-    $('.choose_topic>input').change(function () {
-        if ($('.choose_topic>input').eq(2).is(':checked')) {
+    $('.getInfor input').click(function () {
+        if ($('.getInfor input').eq(2).is(':checked')) {
             alert('智能机器人技术课题可同时参加创新挑战赛，如参加创新挑战赛，需提交作品视频链接，详情请关注创新大赛官网')
-            $('.choose_topic_third').html('（同时参加创新挑战赛<input type="radio" checked="checked" name="join_challenge" value="1">是<input type="radio"  name="join_challenge"  checked="checked"  value="0">否）');
+            $('.choose_topic_third').html('<label>（同时参加创新挑战赛<input type="radio" checked="checked" name="join_challenge" value="1">是<input type="radio"  name="join_challenge"  checked="checked"  value="0">否）</label>');
         }
         else {
             $('.choose_topic_third').html('');
